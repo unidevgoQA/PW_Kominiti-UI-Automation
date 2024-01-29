@@ -1,0 +1,128 @@
+{
+  "config": {
+    "configFile": "D:\\2024\\Automation\\PW-BP\\ENV\\Kominiti\\playwright.config.ts",
+    "rootDir": "D:/2024/Automation/PW-BP/ENV/Kominiti/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "D:\\2024\\Automation\\PW-BP\\ENV\\Kominiti\\utils\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/2024/Automation/PW-BP/ENV/Kominiti/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "",
+        "name": "",
+        "testDir": "D:/2024/Automation/PW-BP/ENV/Kominiti/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "login.test.ts"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.41.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "login.test.ts",
+      "file": "login.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Kominiti-001 | Validate User Can Login Successfully With Valid Credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 26186,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "Go to the url",
+                      "duration": 8899
+                    },
+                    {
+                      "title": "Click On sign In Button",
+                      "duration": 399
+                    },
+                    {
+                      "title": "User Login Functionality",
+                      "duration": 13198
+                    }
+                  ],
+                  "startTime": "2024-01-29T09:59:57.019Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2024\\Automation\\PW-BP\\ENV\\Kominiti\\test-results\\login-Kominiti-001-Validate-User-Can-Login-Successfully-With-Valid-Credentials\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "12975f3ff1f884ffbbdd-0fe63f1967aa1ead65b3",
+          "file": "login.test.ts",
+          "line": 6,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-01-29T09:59:55.913Z",
+    "duration": 29950.456,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
