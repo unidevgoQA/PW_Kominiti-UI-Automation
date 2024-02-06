@@ -12,10 +12,10 @@ export default class LoginPage {
                 passwordInputField: "//input[@type='password']",
                 loginBtn: "//button[text()='Sign In']",
                 homeTabEle: "//a[contains(text(),'Home')]",
-                signInBtn: `//button[text()='Sign In']`
-
+                signInBtn: `//button[text()='Sign In']`,
 
         }
+
 
 
         // Module Name: Kominiti | Home

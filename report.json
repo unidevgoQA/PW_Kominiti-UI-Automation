@@ -1,10 +1,10 @@
 {
   "config": {
-    "configFile": "D:\\2024\\Automation\\PW-BP\\ENV\\Kominiti\\playwright.config.ts",
-    "rootDir": "D:/2024/Automation/PW-BP/ENV/Kominiti/tests",
+    "configFile": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\playwright.config.ts",
+    "rootDir": "K:/A UNIDEVGO/PW_Kominiti-UI-Automation/tests",
     "forbidOnly": false,
     "fullyParallel": true,
-    "globalSetup": "D:\\2024\\Automation\\PW-BP\\ENV\\Kominiti\\utils\\global-setup.ts",
+    "globalSetup": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\utils\\global-setup.ts",
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
@@ -35,15 +35,15 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "D:/2024/Automation/PW-BP/ENV/Kominiti/test-results",
+        "outputDir": "K:/A UNIDEVGO/PW_Kominiti-UI-Automation/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "",
         "name": "",
-        "testDir": "D:/2024/Automation/PW-BP/ENV/Kominiti/tests",
+        "testDir": "K:/A UNIDEVGO/PW_Kominiti-UI-Automation/tests",
         "testIgnore": [],
         "testMatch": [
-          "login.test.ts"
+          "MarketPlace.test.ts"
         ],
         "timeout": 300000
       }
@@ -56,13 +56,13 @@
   },
   "suites": [
     {
-      "title": "login.test.ts",
-      "file": "login.test.ts",
+      "title": "MarketPlace.test.ts",
+      "file": "MarketPlace.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Kominiti-001 | Validate User Can Login Successfully With Valid Credentials",
+          "title": "Kominiti-068 | Marketplace | Create project | Validate that the user can select from dropdown in pricing and save & continue to next stage ",
           "ok": true,
           "tags": [],
           "tests": [
@@ -76,7 +76,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 26186,
+                  "duration": 36349,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -84,23 +84,47 @@
                   "steps": [
                     {
                       "title": "Go to the url",
-                      "duration": 8899
+                      "duration": 9107
                     },
                     {
                       "title": "Click On sign In Button",
-                      "duration": 399
+                      "duration": 407
                     },
                     {
                       "title": "User Login Functionality",
-                      "duration": 13198
+                      "duration": 13424
+                    },
+                    {
+                      "title": "Marketplace redirects on click",
+                      "duration": 347
+                    },
+                    {
+                      "title": "Create project from MarketPlace",
+                      "duration": 1237
+                    },
+                    {
+                      "title": "Check empty field mandatory warning while clicking save and continue ",
+                      "duration": 2740
+                    },
+                    {
+                      "title": "Save project from Overview",
+                      "duration": 3929
+                    },
+                    {
+                      "title": "Save project for Description & FAQ",
+                      "duration": 3012
+                    },
+                    {
+                      "title": "Save project for pricing",
+                      "duration": 1352
                     }
                   ],
-                  "startTime": "2024-01-29T09:59:57.019Z",
+                  "startTime": "2024-02-06T07:05:44.893Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\2024\\Automation\\PW-BP\\ENV\\Kominiti\\test-results\\login-Kominiti-001-Validate-User-Can-Login-Successfully-With-Valid-Credentials\\test-finished-1.png"
+                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-068-Marketplace-Create-pr-ac1cd-own-in-pricing-and-save-continue-to-next-stage-\\test-finished-1.png"
                     }
                   ]
                 }
@@ -108,18 +132,18 @@
               "status": "expected"
             }
           ],
-          "id": "12975f3ff1f884ffbbdd-0fe63f1967aa1ead65b3",
-          "file": "login.test.ts",
-          "line": 6,
-          "column": 5
+          "id": "36a5fc31f008691f9dde-c5668e8613a349a6b5a1",
+          "file": "MarketPlace.test.ts",
+          "line": 136,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-29T09:59:55.913Z",
-    "duration": 29950.456,
+    "startTime": "2024-02-06T07:05:43.106Z",
+    "duration": 38920.978,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

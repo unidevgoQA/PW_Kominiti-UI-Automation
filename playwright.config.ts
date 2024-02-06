@@ -8,7 +8,8 @@ const config: PlaywrightTestConfig = {
   globalSetup: "utils/global-setup.ts",
   testDir: "./tests",
   testMatch: [
-    "login.test.ts"
+    //"login.test.ts",
+    "MarketPlace.test.ts",
 
 
   ],
@@ -60,7 +61,7 @@ const config: PlaywrightTestConfig = {
     permissions: ["microphone", "camera", "clipboard-read", "clipboard-write"],
     headless: process.env.CI ? true : false,
     browserName: 'chromium',
-    channel: 'msedge',
+    channel: 'chrome',
     viewport: { width: 1700, height: 920 },
     ignoreHTTPSErrors: true,
     // permissions: ["camera"],

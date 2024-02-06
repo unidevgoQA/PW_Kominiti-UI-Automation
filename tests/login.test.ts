@@ -1,6 +1,8 @@
 
 import ENV from '../utils/env'
 import test, { expect } from "@fixtures/basePages"
+import MarketPlacePage from 'pages/MarketPlace.page'
+
 
 
 test('Kominiti-001 | Validate User Can Login Successfully With Valid Credentials', async ({ page, loginPage }) => {
@@ -15,8 +17,6 @@ test('Kominiti-001 | Validate User Can Login Successfully With Valid Credentials
                 await loginPage.userlogin(ENV.EMAIL, ENV.PASSWORD)
                 await page.waitForLoadState("networkidle")
         })
-
-
 
 
 })
