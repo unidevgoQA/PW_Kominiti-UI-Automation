@@ -62,7 +62,7 @@ const config: PlaywrightTestConfig = {
     headless: process.env.CI ? true : false,
     browserName: 'chromium',
     channel: 'chrome',
-    viewport: { width: 1700, height: 920 },
+    viewport: { width: 1500, height: 700 },
     ignoreHTTPSErrors: true,
     // permissions: ["camera"],
 

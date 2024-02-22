@@ -62,7 +62,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Kominiti-068 | Marketplace | Create project | Validate that the user can select from dropdown in pricing and save & continue to next stage ",
+          "title": "Kominiti-081 | Marketplace | Project | Validate user can Edit and delete question on FAQ.",
           "ok": true,
           "tags": [],
           "tests": [
@@ -76,7 +76,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 36349,
+                  "duration": 34903,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -84,47 +84,39 @@
                   "steps": [
                     {
                       "title": "Go to the url",
-                      "duration": 9107
+                      "duration": 8805
                     },
                     {
                       "title": "Click On sign In Button",
-                      "duration": 407
+                      "duration": 372
                     },
                     {
                       "title": "User Login Functionality",
-                      "duration": 13424
+                      "duration": 13123
                     },
                     {
                       "title": "Marketplace redirects on click",
-                      "duration": 347
+                      "duration": 378
                     },
                     {
-                      "title": "Create project from MarketPlace",
-                      "duration": 1237
+                      "title": "Click on a project a Automation",
+                      "duration": 5450
                     },
                     {
-                      "title": "Check empty field mandatory warning while clicking save and continue ",
-                      "duration": 2740
+                      "title": "Click on a project 3 dot edit Question",
+                      "duration": 5274
                     },
                     {
-                      "title": "Save project from Overview",
-                      "duration": 3929
-                    },
-                    {
-                      "title": "Save project for Description & FAQ",
-                      "duration": 3012
-                    },
-                    {
-                      "title": "Save project for pricing",
-                      "duration": 1352
+                      "title": "Click on a project 3 dot delete Question",
+                      "duration": 585
                     }
                   ],
-                  "startTime": "2024-02-06T07:05:44.893Z",
+                  "startTime": "2024-02-22T13:05:40.197Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-068-Marketplace-Create-pr-ac1cd-own-in-pricing-and-save-continue-to-next-stage-\\test-finished-1.png"
+                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-081-Marketplace-Project-Validate-user-can-Edit-and-delete-question-on-FAQ-\\test-finished-1.png"
                     }
                   ]
                 }
@@ -132,9 +124,9 @@
               "status": "expected"
             }
           ],
-          "id": "36a5fc31f008691f9dde-c5668e8613a349a6b5a1",
+          "id": "36a5fc31f008691f9dde-65e348f5dac63f49ff5f",
           "file": "MarketPlace.test.ts",
-          "line": 136,
+          "line": 767,
           "column": 6
         }
       ]
@@ -142,8 +134,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-02-06T07:05:43.106Z",
-    "duration": 38920.978,
+    "startTime": "2024-02-22T13:05:37.995Z",
+    "duration": 37980.235,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
