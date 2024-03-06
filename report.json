@@ -62,7 +62,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Kominiti-081 | Marketplace | Project | Validate user can Edit and delete question on FAQ.",
+          "title": "Kominiti-098 | Marketplace |  Category details | Validate filter is working according to every search result",
           "ok": true,
           "tags": [],
           "tests": [
@@ -76,7 +76,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 34903,
+                  "duration": 37640,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -84,39 +84,47 @@
                   "steps": [
                     {
                       "title": "Go to the url",
-                      "duration": 8805
+                      "duration": 12270
                     },
                     {
                       "title": "Click On sign In Button",
-                      "duration": 372
+                      "duration": 390
                     },
                     {
                       "title": "User Login Functionality",
-                      "duration": 13123
+                      "duration": 14825
                     },
                     {
                       "title": "Marketplace redirects on click",
-                      "duration": 378
+                      "duration": 402
                     },
                     {
-                      "title": "Click on a project a Automation",
-                      "duration": 5450
+                      "title": "Click on the search field with value",
+                      "duration": 2975
                     },
                     {
-                      "title": "Click on a project 3 dot edit Question",
-                      "duration": 5274
+                      "title": "Filter page when Search is clicked",
+                      "duration": 12
                     },
                     {
-                      "title": "Click on a project 3 dot delete Question",
-                      "duration": 585
+                      "title": "Check that the filter is working",
+                      "duration": 3125
+                    },
+                    {
+                      "title": "Check that the filter is working",
+                      "duration": 1545
+                    },
+                    {
+                      "title": "Apply and Validate filter",
+                      "duration": 1352
                     }
                   ],
-                  "startTime": "2024-02-22T13:05:40.197Z",
+                  "startTime": "2024-03-06T13:34:14.244Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-081-Marketplace-Project-Validate-user-can-Edit-and-delete-question-on-FAQ-\\test-finished-1.png"
+                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-098-Marketplace-Category--5c44d-ter-is-working-according-to-every-search-result\\test-finished-1.png"
                     }
                   ]
                 }
@@ -124,9 +132,9 @@
               "status": "expected"
             }
           ],
-          "id": "36a5fc31f008691f9dde-65e348f5dac63f49ff5f",
+          "id": "36a5fc31f008691f9dde-117973616c70d60faeae",
           "file": "MarketPlace.test.ts",
-          "line": 767,
+          "line": 1605,
           "column": 6
         }
       ]
@@ -134,8 +142,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-02-22T13:05:37.995Z",
-    "duration": 37980.235,
+    "startTime": "2024-03-06T13:34:11.805Z",
+    "duration": 40820.902,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
