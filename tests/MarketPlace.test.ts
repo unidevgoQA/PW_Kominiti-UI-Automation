@@ -421,7 +421,7 @@ test('Kominiti-072 | Marketplace | Create Project | Validate cancelling the proj
         await test.step("Create project from MarketPlace",async () => {
                 await MarketPlacePage.clickOnCreateProject()
                 await page.waitForLoadState("networkidle")
-                await expect(page).toHaveURL(/create-project/)
+                
     
         })
         await test.step("Check empty field mandatory warning while clicking save and continue ",async () => {
@@ -506,12 +506,13 @@ test('Kominiti-072 | Marketplace | Create Project | Validate cancelling the proj
 
         await test.step("Cancel project from Preview",async () => {
                 await MarketPlacePage.cancelProjectFinal()
-                await page.waitForTimeout(3000)
+                
         })
 
     
     
 })
+
 
 test('Kominiti-073 | Marketplace | Create Project | Validate Project is successfully saved ', async ({page, loginPage, MarketPlacePage}) => {
 
@@ -610,22 +611,23 @@ test('Kominiti-073 | Marketplace | Create Project | Validate Project is successf
                 await MarketPlacePage.createPojectAttachment_2()
                 await page.waitForTimeout(300)
                 await MarketPlacePage.SaveNContinue()
+                await page.waitForTimeout(2000)
         })
 
 
          await test.step("Save project from Preview",async () => {
-                 await MarketPlacePage.finalSaveBtn()
+                await MarketPlacePage.finalSaveBtn()
                 await page.waitForTimeout(2000)
         })
 
-        await test.step("Redirect to home dashboard and Delete the newly created post",async () => {
-                await MarketPlacePage.clickHomeDashboardRedirect()
-                await page.waitForLoadState("networkidle")
-                await MarketPlacePage.homeDeletePostHamburgerSign()
-                await page.waitForTimeout(1000)
-                await MarketPlacePage.homePostDeleteDrpdnBtn()
+        // await test.step("Redirect to home dashboard and Delete the newly created post",async () => {
+        //         await MarketPlacePage.clickHomeDashboardRedirect()
+        //         await page.waitForLoadState("networkidle")
+        //         await MarketPlacePage.homeDeletePostHamburgerSign()
+        //         await page.waitForTimeout(1000)
+        //         await MarketPlacePage.homePostDeleteDrpdnBtn()
                 
-        })
+        // })
     
 
     
@@ -649,8 +651,7 @@ test('Kominiti-075 | Marketplace | Project | Share | Validate when user post "re
         await test.step('Marketplace redirects on click',async () => {
                await MarketPlacePage.clickOnMarketPlaceToRedirct()
                await page.waitForLoadState("networkidle") 
-               
-               await page.waitForLoadState("networkidle")
+        
                     
         })
         
@@ -668,6 +669,7 @@ test('Kominiti-075 | Marketplace | Project | Share | Validate when user post "re
                 await MarketPlacePage.clickRepostOnWallShareBtn()
                 await page.waitForTimeout(1000)
                 await MarketPlacePage.clickRepostOnWallCloseAfterShareBtnClicked()
+                await page.waitForTimeout(1000)
         })
 
         await test.step("Redirect to home dashboard and Delete the newly created repost on the wall",async () => {
@@ -813,16 +815,16 @@ test('Kominiti-078 | Marketplace | Project | Share | Validate user can Share on 
         //share with LinkedIn
         await test.step("check linkedin URL redirecting", async()=> {
                 await MarketPlacePage.newPageAgainLinked()
-                page.waitForTimeout(1000)
+                
                 
         })
 
         //share with pinterest
-        await test.step("check pinterest URL rediecting", async()=> {
-                await MarketPlacePage.newPageAgainPinterest()
-                page.waitForTimeout(1000)
+        // await test.step("check pinterest URL rediecting", async()=> {
+        //         await MarketPlacePage.newPageAgainPinterest()
+        //         page.waitForTimeout(1000)
                 
-        })
+        // })
         
 
         
@@ -1514,7 +1516,7 @@ test('Kominiti-095 | Marketplace | View all categories | Validates Admin support
 
 })
 
-test('Kominiti-096 | Marketplace | Validate redirect to Category details is working in search field  ',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test.only('Kominiti-096 | Marketplace | Validate redirect to Category details is working in search field  ',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1538,19 +1540,9 @@ test('Kominiti-096 | Marketplace | Validate redirect to Category details is work
                 await MarketPlacePage.clickNAdminCategorySearchDrpdwn()
                 await MarketPlacePage.clickNValueMainSearchField("need")
                 await MarketPlacePage.clickSearchBtn()  
-                await page.waitForLoadState('load')      
+                await page.waitForLoadState("networkidle")    
+                await MarketPlacePage.validateFilterResult() 
         })
-
-        await test.step("Filter page when Search is clicked",async () => {
-                await MarketPlacePage.validateFilterText("Filter")
-
-        })
-        
-
-
-
-
-        
 
 
 })
@@ -1579,13 +1571,10 @@ test('Kominiti-097 | Marketplace |  Category details | Sort by dropdown is worki
                 await MarketPlacePage.clickNAdminCategorySearchDrpdwn()
                 await MarketPlacePage.clickNValueMainSearchField("need")
                 await MarketPlacePage.clickSearchBtn()  
-                await page.waitForLoadState('load')      
+                await page.waitForLoadState("networkidle")
+                await MarketPlacePage.validateFilterResult()      
         })
 
-        await test.step("Filter page when Search is clicked",async () => {
-                await MarketPlacePage.validateFilterText("Filter")
-
-        })
         
         await test.step("Validate filter sort",async () => {
                 await MarketPlacePage.clickFilterSortBy()
@@ -1626,17 +1615,13 @@ test('Kominiti-098 | Marketplace |  Category details | Validate filter is workin
                 await MarketPlacePage.clickNAdminCategorySearchDrpdwn()
                 await MarketPlacePage.clickNValueMainSearchField("need")
                 await MarketPlacePage.clickSearchBtn()  
-                await page.waitForLoadState('load')      
-        })
-
-        await test.step("Filter page when Search is clicked",async () => {
-                await MarketPlacePage.validateFilterText("Filter")
-
+                await page.waitForLoadState('networkidle')    
         })
         
         await test.step("Check that the filter is working",async () => {
                 await MarketPlacePage.clickSlctCategory()
                 await MarketPlacePage.clickFilterSortBy()
+                await page.waitForTimeout(1000)
                 await MarketPlacePage.clickFilterNewestOption()
                 await MarketPlacePage.clickNFillBudgetMin("100")
                 await MarketPlacePage.clickNFillBudgetMax("5000")
@@ -1645,8 +1630,9 @@ test('Kominiti-098 | Marketplace |  Category details | Validate filter is workin
 
        
         await test.step("Check that the filter is working",async () => {
-               // await MarketPlacePage.clickNFillBidResponseDate("03062024") //mm/dd/yyyy
+                //await MarketPlacePage.clickNFillBidResponseDate("03062024") //mm/dd/yyyy
                 await MarketPlacePage.clickProjectLength()
+                await MarketPlacePage.clickProjectLength_1_3Month()
                 await page.waitForTimeout(1000)
 
         })

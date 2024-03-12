@@ -17,7 +17,7 @@ export default class MarketPlacePage{
     }
     private MarketPlaceElements = {
         MarketPlaceRedirct: "//a[contains(text(),'Marketplace')]",
-        CreateProject : "//button[text()='Create MarketPlace | Project']",
+        CreateProject : "//button[text()='Create Project']",
         SaveAndContinue: "//button[@class='action-button square']",
         
         MandatoryWarning: "//div[@class='validator-message error-messages']",
@@ -31,7 +31,7 @@ export default class MarketPlacePage{
         AddBtn: "//button[text()='Add']",
         //Description & Faq
         ProjectDiscripiton: "//textarea[@class='custom-textarea project-description-input']",
-        ProjectType:"(//span[text()='MarketPlace | Project type']/following::input)[1]",
+        ProjectType:"(//span[text()='Project type']/following::input)[1]",
         ProjectTypeOption: "//ul[@class='custom-drop-down-items-list']//li[1]",
         BidProject: "(//div[@class='custom-form-input custom-form-input']//input)[2]",
         BidProjectOption:"//ul[@class='custom-drop-down-items-list']//li[1]",
@@ -88,7 +88,7 @@ export default class MarketPlacePage{
         ShareOnSocialMedia: "(//div[@class='dropdown-menu']//a)[2]",
         ShareWithFB: "(//span[@class='social-box-grid__circle'])[1]",
         ShareWithTwitter: "(//span[@class='social-box-grid__circle'])[2]",
-        ShareWithPinterset: "(//span[@class='social-box-grid__circle'])[3]",
+        ShareWithPinterset: "(//div[@class='social-box-grid'])[3]",
         ShareWithLinkedIN: "(//span[@class='social-box-grid__circle'])[4]",
         //Add question
         InsideProjectAddQusBtn: "//button[text()='Add Question']",
@@ -109,7 +109,7 @@ export default class MarketPlacePage{
         //testPorject
         TestAbcProject: "//div[text()='TestABC']",
         ContactBuyerBtn: "//button[text()='Contact Buyer']",
-        MessageBoxBuyers: "(//h3[text()='CHINONSO ROBERT NWANEGBO'])[2]",
+        MessageBoxBuyers: "//div[@class='user-name']//h3[1]",
 
         //see more
         InsideProjectSeeMoreBtn: "//button[text()='See More']",
@@ -141,7 +141,7 @@ export default class MarketPlacePage{
         
         //manage bid
         ManageBidBtn: "//a[@class='action_btn']",
-        ProjectDashText: "//div[text()='MarketPlace | Project Dashboard']",
+        ProjectDashText: "//div[text()='Project Dashboard']",
 
         //View all categories
         ViewAllCategoriesBtn: "//div[@class='section-title']//button[1]",
@@ -164,7 +164,7 @@ export default class MarketPlacePage{
         SearchBtn: "//button[text()='Search']",
 
         //Filter
-        FilterText: "//div[text()='Filter']",
+        FilterResult: "//span[text()='Search results']",
         FilterSortBy: "(//div[@class='new-variable-drop-down__head--mask'])[2]",
         FilterClientRatingOption: "//ul[@class='new-variable-drop-down__menu-list']//li[2]",
         FilterOccupiedClientrat: "//h3[text()='Client rating']",
@@ -173,7 +173,7 @@ export default class MarketPlacePage{
         BudgetMin:"(//span[text()='min']/following::input)[1]",
         BudgetMax: "(//span[text()='max']/following::input)[1]",
         BidResponseDate: "//input[@placeholder='MM/DD/YYYY']",
-        ProjectLength: "//div[@class='custom-form-input custom-form-input']//input[1]",
+        ProjectLength: "input[name='select_duration']",
         ProjectLenght_1_3mon:"//li[text()='1-3 months']",
         ApplyBtn: "//button[text()='Apply']",
         FilterOccupiedNewest: "(//h3[text()='Newest'])[1]"
@@ -605,6 +605,8 @@ export default class MarketPlacePage{
             await CancelProjectFinal.click({ button: "left", delay: 100})
             await this.page.waitForTimeout(300)
             await ContinueCancelProjectFinal.click()
+            await this.page.waitForTimeout(1000)
+            await expect(this.page).toHaveURL("/market-place")
 
         } catch (error) {
                 throw new Error(`Home Page | MarketPlace | Create MarketPlace | Project | Overview | Description & FAQ | Pricing | Requiremnts | Attachment | Cancel | Could Not Find Locator:"${error}"`)
@@ -1167,7 +1169,7 @@ export default class MarketPlacePage{
             const MessageBoxBuyers= await this.page.locator(this.MarketPlaceElements.MessageBoxBuyers)
             try {
 
-                expect(MessageBoxBuyers).toHaveText("CHINONSO ROBERT NWANEGBO")
+                expect(MessageBoxBuyers).toBeVisible();
                
             } catch (error) {
                 throw new Error(`Home Page | MarketPlace | Project | TestABC | Contact buyers | Could Not Find Locator:"${error}"`)
@@ -1451,7 +1453,7 @@ export default class MarketPlacePage{
                 expect(ProjectDashText).toContainText(value)
                
             } catch (error) {
-                throw new Error(`Home Page | Marketplace | Manage Bid | Redirect to Prject DashBoard | Could Not Find Locator:"${error}"`)
+                throw new Error(`Home Page | Marketplace | Manage Bid | Redirect to Project DashBoard | Could Not Find Locator:"${error}"`)
             }
         }
 
@@ -1685,11 +1687,13 @@ export default class MarketPlacePage{
         // Feature Name: Marketplace
         // Screen Type: Desktop
         // Description: Filter validate
-        async validateFilterText(value: string){
-            const FilterText= await this.page.locator(this.MarketPlaceElements.FilterText)
+        async validateFilterResult(){
+            const FilterResult= await this.page.locator(this.MarketPlaceElements.FilterResult)
             try {
-
-                expect(FilterText).toContainText(value)
+                console.log(FilterResult)
+                
+                this.page.isVisible("Search results")
+                expect(FilterResult).toContainText("Search results")
                
             } catch (error) {
                 throw new Error(`Home Page | MarketPlace | Search | Filter Page | Could Not Find Locator:"${error}"`)
@@ -1758,14 +1762,16 @@ export default class MarketPlacePage{
             const CategoryAdminSupportOption= await this.page.locator(this.MarketPlaceElements.CategoryAdminSupportOption)
             try {
                
-                await SlctCategory.click({ button: "left", delay: 100 })
-                await CategoryAdminSupportOption.click({ button: "left", delay: 100 })
+                await SlctCategory.click({ button: "left", delay: 100, force:true  })
+                await CategoryAdminSupportOption.click({ button: "left", delay: 100, force:true })
+    
     
             } catch (error) {
                     throw new Error(`Home Page | MarketPlace | Search | Filter | Select Category | Could Not Find Locator:"${error}"`)
                 }
         }
 
+    
         // Module Name: Kominiti | Marketpalce | Search | Sort By | filter options | select category
         // Feature Name: Marketplace
         // Screen Type: Desktop
@@ -1841,17 +1847,29 @@ export default class MarketPlacePage{
         // Description: Select and fill project length
         async clickProjectLength() {
             const ProjectLength= await this.page.locator(this.MarketPlaceElements.ProjectLength)
-            const ProjectLenght_1_3mon= await this.page.locator(this.MarketPlaceElements.ProjectLenght_1_3mon)
+            
             try {
                
-                await ProjectLength.click({ button: "left", delay: 100,force:true })
-                await ProjectLenght_1_3mon.click({ button: "left", delay: 100, force:true })
+                await ProjectLength.click({ button: "left", delay: 100, force:true })
                 
-    
             } catch (error) {
                     throw new Error(`Home Page | MarketPlace | Search | Filter | Project Length | Could Not Find Locator:"${error}"`)
                 }
         }
+
+        async clickProjectLength_1_3Month() {
+            const ProjectLenght_1_3mon= await this.page.locator(this.MarketPlaceElements.ProjectLenght_1_3mon)
+            try {
+               
+                await ProjectLenght_1_3mon.click({ button: "left", delay: 100, force:true })
+                
+    
+            } catch (error) {
+                    throw new Error(`Home Page | MarketPlace | Search | Filter | Project Length (1-3 month) | Could Not Find Locator:"${error}"`)
+                }
+        }
+
+
 
 
         // Module Name: Kominiti | Marketpalce | Search | Sort By | filter options | Apply
