@@ -1,10 +1,10 @@
 {
   "config": {
-    "configFile": "D:\\2024\\Automation\\PW-BP\\ENV\\Kominiti\\playwright.config.ts",
-    "rootDir": "D:/2024/Automation/PW-BP/ENV/Kominiti/tests",
+    "configFile": "D:\\Kominiti Automation\\PW_Kominiti-UI-Automation\\PW_Kominiti-UI-Automation\\playwright.config.ts",
+    "rootDir": "D:/Kominiti Automation/PW_Kominiti-UI-Automation/PW_Kominiti-UI-Automation/tests",
     "forbidOnly": false,
     "fullyParallel": true,
-    "globalSetup": "D:\\2024\\Automation\\PW-BP\\ENV\\Kominiti\\utils\\global-setup.ts",
+    "globalSetup": "D:\\Kominiti Automation\\PW_Kominiti-UI-Automation\\PW_Kominiti-UI-Automation\\utils\\global-setup.ts",
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
@@ -35,12 +35,12 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "D:/2024/Automation/PW-BP/ENV/Kominiti/test-results",
+        "outputDir": "D:/Kominiti Automation/PW_Kominiti-UI-Automation/PW_Kominiti-UI-Automation/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "",
         "name": "",
-        "testDir": "D:/2024/Automation/PW-BP/ENV/Kominiti/tests",
+        "testDir": "D:/Kominiti Automation/PW_Kominiti-UI-Automation/PW_Kominiti-UI-Automation/tests",
         "testIgnore": [],
         "testMatch": [
           "login.test.ts"
@@ -62,7 +62,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Kominiti-001 | Validate User Can Login Successfully With Valid Credentials",
+          "title": "Kominiti-039 | Home | Validate if campaign invitation can be sent",
           "ok": true,
           "tags": [],
           "tests": [
@@ -76,7 +76,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 26186,
+                  "duration": 16257,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -84,23 +84,31 @@
                   "steps": [
                     {
                       "title": "Go to the url",
-                      "duration": 8899
+                      "duration": 1993
                     },
                     {
                       "title": "Click On sign In Button",
-                      "duration": 399
+                      "duration": 703
                     },
                     {
                       "title": "User Login Functionality",
-                      "duration": 13198
+                      "duration": 5950
+                    },
+                    {
+                      "title": "Click on Home button",
+                      "duration": 338
+                    },
+                    {
+                      "title": "Home | Validate if campaign invitation can be sent",
+                      "duration": 6189
                     }
                   ],
-                  "startTime": "2024-01-29T09:59:57.019Z",
+                  "startTime": "2024-03-19T04:46:27.556Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\2024\\Automation\\PW-BP\\ENV\\Kominiti\\test-results\\login-Kominiti-001-Validate-User-Can-Login-Successfully-With-Valid-Credentials\\test-finished-1.png"
+                      "path": "D:\\Kominiti Automation\\PW_Kominiti-UI-Automation\\PW_Kominiti-UI-Automation\\test-results\\login-Kominiti-039-Home-Validate-if-campaign-invitation-can-be-sent\\test-finished-1.png"
                     }
                   ]
                 }
@@ -108,18 +116,18 @@
               "status": "expected"
             }
           ],
-          "id": "12975f3ff1f884ffbbdd-0fe63f1967aa1ead65b3",
+          "id": "12975f3ff1f884ffbbdd-3d1dd91f5a2cef49b43c",
           "file": "login.test.ts",
-          "line": 6,
-          "column": 5
+          "line": 914,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-29T09:59:55.913Z",
-    "duration": 29950.456,
+    "startTime": "2024-03-19T04:46:26.392Z",
+    "duration": 19595.289,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
