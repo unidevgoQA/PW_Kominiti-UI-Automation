@@ -9,7 +9,8 @@ const config: PlaywrightTestConfig = {
   testDir: "./tests",
   testMatch: [
     //"login.test.ts",
-    "MarketPlace.test.ts",
+    //"MarketPlace.test.ts",
+    "HotDeals.test.ts"
 
 
   ],
@@ -19,7 +20,7 @@ const config: PlaywrightTestConfig = {
 
   },
 
-  fullyParallel: true,
+  fullyParallel: true, //set if true afterwards
   retries: process.env.CI ? 1 : 0,
   workers: process.env.CI ? 1 : 1,
 

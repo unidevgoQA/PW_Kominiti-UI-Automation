@@ -164,7 +164,7 @@ export default class MarketPlacePage{
         SearchBtn: "//button[text()='Search']",
 
         //Filter
-        FilterResult: "//span[text()='Search results']",
+        FilterResult: "//div[@class='separator']/following-sibling::span[1]",
         FilterSortBy: "(//div[@class='new-variable-drop-down__head--mask'])[2]",
         FilterClientRatingOption: "//ul[@class='new-variable-drop-down__menu-list']//li[2]",
         FilterOccupiedClientrat: "//h3[text()='Client rating']",
@@ -176,8 +176,14 @@ export default class MarketPlacePage{
         ProjectLength: "input[name='select_duration']",
         ProjectLenght_1_3mon:"//li[text()='1-3 months']",
         ApplyBtn: "//button[text()='Apply']",
-        FilterOccupiedNewest: "(//h3[text()='Newest'])[1]"
+        FilterOccupiedNewest: "(//h3[text()='Newest'])[1]",
+        ResetBtn: "//button[@class='filter-form--action filter-form--action-black']",
         
+        //Perform bid
+        Cricket: "//h3[text()='Cricket']",
+        Perform: "//div[@class='bid-project--actions__cell']//button[1]",
+        OngoingText: "//span[text()='Ongoing']",
+        ViewProject: "//div[@class='status-cell']//a[1]",
 
 
 
@@ -1383,10 +1389,10 @@ export default class MarketPlacePage{
         // Screen Type: Desktop
         // Description: Validate Cancel bid succeed
         async clickOverviewAfterCancelPlaceBid(value: string){
-            const OverviewAfterCancel= await this.page.locator(this.MarketPlaceElements.OverviewAfterCancel)
+            const OverviewAfterCancel= await this.page.locator(this.MarketPlaceElements.OverviewAfterCancel).textContent()
             try {
 
-                expect(OverviewAfterCancel).toContainText(value)
+                expect(OverviewAfterCancel.includes(value)).toBeTruthy()
                
             } catch (error) {
                 throw new Error(`Home Page | Marketplace | Place bid | cancel | Could Not Find Locator:"${error}"`)
@@ -1688,13 +1694,14 @@ export default class MarketPlacePage{
         // Screen Type: Desktop
         // Description: Filter validate
         async validateFilterResult(){
-            const FilterResult= await this.page.locator(this.MarketPlaceElements.FilterResult)
+            const FilterResult= await this.page.locator(this.MarketPlaceElements.FilterResult).textContent()
             try {
-                console.log(FilterResult)
                 
-                this.page.isVisible("Search results")
-                expect(FilterResult).toContainText("Search results")
+                
+                this.page.isVisible("Search")
+                expect(FilterResult.includes("Search")).toBeTruthy()
                
+
             } catch (error) {
                 throw new Error(`Home Page | MarketPlace | Search | Filter Page | Could Not Find Locator:"${error}"`)
             }
@@ -1906,9 +1913,111 @@ export default class MarketPlacePage{
 
 
 
+        // Module Name: Kominiti | Marketpalce | Search | Reset filter
+        // Feature Name: Marketplace
+        // Screen Type: Desktop
+        // Description: Validate Reset filter
+        async clickResetBtn() {
+
+            const ResetBtn= await this.page.locator(this.MarketPlaceElements.ResetBtn)
+            try {
+               
+                await ResetBtn.click({ button: "left", delay: 100 , force:true})
+    
+            } catch (error) {
+                    throw new Error(`Home Page | MarketPlace | Search | Filter | Reset | Could Not Find Locator:"${error}"`)
+                }
+        }
 
 
 
+        // Module Name: Kominiti | Marketpalce | Search | Reset filter | Validate reset done successfully
+        // Feature Name: Marketplace
+        // Screen Type: Desktop
+        // Description: Validate reset done successfully
+        async  checkEmptyInputFiledBudget() {
+
+            const BudgetMin= await this.page.locator(this.MarketPlaceElements.BudgetMin)
+            try {
+               
+                expect(BudgetMin).toBeEmpty()
+    
+            } catch (error) {
+                    throw new Error(`Home Page | MarketPlace | Search | Filter | Reset | Validate | Could Not Find Locator:"${error}"`)
+                }
+        }
+
+
+
+        // Module Name: Kominiti | Home| MarketPlace | Project | Cricket
+        // Feature Name: Marketplace
+        // Screen Type: Desktop
+        // Description:  Click on project Cricket
+        async clickTextCricket() {
+
+            const Cricket= await this.page.locator(this.MarketPlaceElements.Cricket)
+            try {
+               
+                await Cricket.click({ button: "left", delay: 100 , force:true})
+    
+            } catch (error) {
+                    throw new Error(`Home Page | MarketPlace | Project | Details (Cricket) | Could Not Find Locator:"${error}"`)
+                }
+        }
+
+
+        // Module Name: Kominiti | Home| MarketPlace | Project | Cricket | Perform
+        // Feature Name: Marketplace
+        // Screen Type: Desktop
+        // Description:  Click on Perform
+        async clickPerform() {
+
+            const Perform= await this.page.locator(this.MarketPlaceElements.Perform)
+            try {
+               
+                await Perform.click({ button: "left", delay: 100 , force:true})
+                
+    
+            } catch (error) {
+                    throw new Error(`Home Page | MarketPlace | Project | Details (Cricket) | Perform | Could Not Find Locator:"${error}"`)
+                }
+        }
+
+
+        // Module Name: Kominiti | Home| MarketPlace | Project | Cricket | Perform | validate Ongoing Text
+        // Feature Name: Marketplace
+        // Screen Type: Desktop
+        // Description:  validate Ongoing Text
+        async validateOngoingText(value: string){
+            const OngoingText= await this.page.locator(this.MarketPlaceElements.OngoingText).textContent()
+            try {
+
+                
+                expect(OngoingText.includes(value)).toBeTruthy()
+               
+            } catch (error) {
+                throw new Error(`Home Page | MarketPlace | Project | Details (Cricket) | Perform | validate Ongoing Text  | Could Not Find Locator:"${error}"`)
+            }
+        }
+
+
+
+        // Module Name: Kominiti | Home| MarketPlace | Project | Cricket | Perform | View project
+        // Feature Name: Marketplace
+        // Screen Type: Desktop
+        // Description: View project
+        async clickViewProject() {
+
+            const ViewProject= await this.page.locator(this.MarketPlaceElements.ViewProject)
+            try {
+               
+                await ViewProject.click({ button: "left", delay: 100 , force:true})
+                
+    
+            } catch (error) {
+                    throw new Error(`Home Page | MarketPlace | Project | Details (Cricket) | Perform | View project | Could Not Find Locator:"${error}"`)
+                }
+        }
 
 
 

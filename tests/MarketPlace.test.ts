@@ -2,7 +2,7 @@ import ENV from '../utils/env'
 import test, { expect } from "@fixtures/basePages"
 import MarketPlacePage from 'pages/MarketPlace.page'
 import { title } from 'process'
-import NewPage from 'pages/NewPage.page'
+//import HotDeals from "pages/HotDeals.page";
 
 
 
@@ -764,7 +764,7 @@ test('Kominiti-077 | Marketplace | Project | Share | Validate user can not post 
 })
 
 
-test('Kominiti-078 | Marketplace | Project | Share | Validate user can Share on social media (fb, twitter, pinterest, LinkedIn) and share link',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-078 | Marketplace | Project | Share | Validate user can Share on social media (fb, twitter, pinterest, LinkedIn) and share link',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -831,7 +831,7 @@ test('Kominiti-078 | Marketplace | Project | Share | Validate user can Share on 
 })
 
 
-test('Kominiti-079 Marketplace | Project | Validate user can view the attached files',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-079 Marketplace | Project | Validate user can view the attached files',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -868,7 +868,7 @@ test('Kominiti-079 Marketplace | Project | Validate user can view the attached f
         
 })
 
-test('Kominiti-080 | Marketplace | Project | Validate user can Add Question on FAQ.',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-080 | Marketplace | Project | Validate user can Add Question on FAQ.',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -918,7 +918,7 @@ test('Kominiti-080 | Marketplace | Project | Validate user can Add Question on F
         
 })
 
-test('Kominiti-081 | Marketplace | Project | Validate user can Edit and delete question on FAQ.',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-081 | Marketplace | Project | Validate user can Edit and delete question on FAQ.',async ({page, loginPage, MarketPlacePage,  browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -971,7 +971,7 @@ test('Kominiti-081 | Marketplace | Project | Validate user can Edit and delete q
         
 })
 
-test('Kominiti-082 | Marketplace | Project | Validate message box open when contact buyer is clicked.',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-082 | Marketplace | Project | Validate message box open when contact buyer is clicked.',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1015,7 +1015,7 @@ test('Kominiti-082 | Marketplace | Project | Validate message box open when cont
 
 })
 
-test('Kominiti-083 Marketplace | Project | Validate that see more is working',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-083 Marketplace | Project | Validate that see more is working',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1059,7 +1059,7 @@ test('Kominiti-083 Marketplace | Project | Validate that see more is working',as
 
 })
 
-test('Kominiti-084 | Marketplace | Project | Validate owner "view profile" redirects to profile',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-084 | Marketplace | Project | Validate owner "view profile" redirects to profile',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1102,7 +1102,7 @@ test('Kominiti-084 | Marketplace | Project | Validate owner "view profile" redir
 
 })
 
-test('Kominiti-085 | Marketplace | Project | Place bid | Validate user can place bid',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-085 | Marketplace | Project | Place bid | Validate user can place bid',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1144,6 +1144,7 @@ test('Kominiti-085 | Marketplace | Project | Place bid | Validate user can place
                 await MarketPlacePage.projectPlaceBidBtnFinalClicked()
                 await page.waitForTimeout(2000)
                 await MarketPlacePage.afterBiddingClickViewBidBtn()
+                await page.waitForTimeout(2000)
                 await MarketPlacePage.validateInputTextFromBid("I am inputting text from automation")
                 
         })
@@ -1153,7 +1154,7 @@ test('Kominiti-085 | Marketplace | Project | Place bid | Validate user can place
 })
 
 
-test('Kominiti-086 | Marketplace | Project | Validate that after bid is placed user can edit bid',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-086 | Marketplace | Project | Validate that after bid is placed user can edit bid',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1202,7 +1203,7 @@ test('Kominiti-086 | Marketplace | Project | Validate that after bid is placed u
 })
 
 
-test('Kominiti-087 | Marketplace | Project | Validate that after bid is placed user can Delete bid',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-087 | Marketplace | Project | Validate that after bid is placed user can Delete bid',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1248,7 +1249,7 @@ test('Kominiti-087 | Marketplace | Project | Validate that after bid is placed u
 
 })
 
-test('Kominiti-088 | Marketplace | Project | Place bid | Validate that when cancel button is clicked it canceled the bid and redirects to overview',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-088 | Marketplace | Project | Place bid | Validate that when cancel button is clicked it canceled the bid and redirects to overview',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1290,7 +1291,7 @@ test('Kominiti-088 | Marketplace | Project | Place bid | Validate that when canc
 })
 
 
-test('Kominiti-090 | Marketplace | Project | Validate that the manage bid button redirect to dashboard to view details',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-090 | Marketplace | Project | Validate that the manage bid button redirect to dashboard to view details',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1332,7 +1333,7 @@ test('Kominiti-090 | Marketplace | Project | Validate that the manage bid button
 
 })
 
-test('Kominiti-091 | Marketplace | View all categories | Validate Account & Finance tab is working ',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-091 | Marketplace | View all categories | Validate Account & Finance tab is working ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1364,7 +1365,7 @@ test('Kominiti-091 | Marketplace | View all categories | Validate Account & Fina
 
 })
 
-test('Kominiti-092 | Marketplace | View all categories | Validate Web, Mobile & Software Dev tab is working ',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-092 | Marketplace | View all categories | Validate Web, Mobile & Software Dev tab is working ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1402,7 +1403,7 @@ test('Kominiti-092 | Marketplace | View all categories | Validate Web, Mobile & 
 
 })
 
-test('Kominiti-093 | Marketplace | View all categories | Validate Data Science & Analytics is working ',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-093 | Marketplace | View all categories | Validate Data Science & Analytics is working ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1440,7 +1441,7 @@ test('Kominiti-093 | Marketplace | View all categories | Validate Data Science &
 
 })
 
-test('Kominiti-094 | Marketplace | View all categories | Validates Consulting is working ',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-094 | Marketplace | View all categories | Validates Consulting is working ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1478,7 +1479,7 @@ test('Kominiti-094 | Marketplace | View all categories | Validates Consulting is
 
 })
 
-test('Kominiti-095 | Marketplace | View all categories | Validates Admin support is working  ',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-095 | Marketplace | View all categories | Validates Admin support is working  ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1516,7 +1517,7 @@ test('Kominiti-095 | Marketplace | View all categories | Validates Admin support
 
 })
 
-test.only('Kominiti-096 | Marketplace | Validate redirect to Category details is working in search field  ',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-096 | Marketplace | Validate redirect to Category details is working in search field  ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1540,14 +1541,14 @@ test.only('Kominiti-096 | Marketplace | Validate redirect to Category details is
                 await MarketPlacePage.clickNAdminCategorySearchDrpdwn()
                 await MarketPlacePage.clickNValueMainSearchField("need")
                 await MarketPlacePage.clickSearchBtn()  
-                await page.waitForLoadState("networkidle")    
+                await page.waitForLoadState('load')
                 await MarketPlacePage.validateFilterResult() 
         })
 
 
 })
 
-test('Kominiti-097 | Marketplace |  Category details | Sort by dropdown is working  ',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-097 | Marketplace |  Category details | Sort by dropdown is working  ',async ({page, loginPage, MarketPlacePage,browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1591,7 +1592,7 @@ test('Kominiti-097 | Marketplace |  Category details | Sort by dropdown is worki
 
 })
 
-test('Kominiti-098 | Marketplace |  Category details | Validate filter is working according to every search result',async ({page, loginPage, MarketPlacePage, newpage, browser}) => {
+test('Kominiti-098 | Marketplace |  Category details | Validate filter is working according to every search result',async ({page, loginPage, MarketPlacePage, browser}) => {
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1648,6 +1649,144 @@ test('Kominiti-098 | Marketplace |  Category details | Validate filter is workin
 
 
         
+
+
+})
+
+test('Kominiti-099 | Marketplace |  Category details | Validate filter resest is working',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+        await test.step('Go to the url', async () => {
+                await page.goto(ENV.BASE_URL);
+        })
+        await test.step('Click On sign In Button', async () => {
+                await loginPage.clickSignInBtn()
+        })
+        await test.step('User Login Functionality', async () => {
+                await loginPage.userlogin(ENV.EMAIL, ENV.PASSWORD)
+                await page.waitForLoadState("networkidle")
+        })
+    
+        //marketplace
+        await test.step('Marketplace redirects on click',async () => {
+               await MarketPlacePage.clickOnMarketPlaceToRedirct()
+               await page.waitForLoadState("networkidle") 
+                    
+        })
+        
+        await test.step("Click on the search field with value",async () => {
+                await MarketPlacePage.clickNAdminCategorySearchDrpdwn()
+                await MarketPlacePage.clickNValueMainSearchField("need")
+                await MarketPlacePage.clickSearchBtn()  
+                await page.waitForLoadState('networkidle')    
+        })
+        
+        await test.step("Check that the filter is working",async () => {
+                await MarketPlacePage.clickSlctCategory()
+                await MarketPlacePage.clickFilterSortBy()
+                await page.waitForTimeout(1000)
+                await MarketPlacePage.clickFilterNewestOption()
+                await MarketPlacePage.clickNFillBudgetMin("100")
+                await MarketPlacePage.clickNFillBudgetMax("5000")
+
+        })
+
+       
+        await test.step("Check that the filter is working",async () => {
+                //await MarketPlacePage.clickNFillBidResponseDate("03062024") //mm/dd/yyyy
+                await MarketPlacePage.clickProjectLength()
+                await MarketPlacePage.clickProjectLength_1_3Month()
+
+        })
+
+
+        await test.step("Reset and Validate filter",async () => {
+                await MarketPlacePage.clickResetBtn()
+                await page.waitForTimeout(1000)
+                await MarketPlacePage.checkEmptyInputFiledBudget()
+               
+        })
+
+
+
+        
+
+
+})
+
+
+test('Kominiti-103 | Marketplace | Project | View bid | Validate clicking on Perform redirect to ongoing project',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+        await test.step('Go to the url', async () => {
+                await page.goto(ENV.BASE_URL);
+        })
+        await test.step('Click On sign In Button', async () => {
+                await loginPage.clickSignInBtn()
+        })
+        await test.step('User Login Functionality', async () => {
+                await loginPage.userlogin(ENV.EMAIL, ENV.PASSWORD)
+                await page.waitForLoadState("networkidle")
+        })
+    
+        //marketplace
+        await test.step('Marketplace redirects on click',async () => {
+               await MarketPlacePage.clickOnMarketPlaceToRedirct()
+               await page.waitForLoadState("networkidle") 
+               
+                    
+        })
+        
+        
+        
+        //Project to repost on wall and check Can not post in 15min
+        await test.step("Click and check the perform button redirect to the ongoing page",async () => {
+                await MarketPlacePage.clickTextCricket()
+                await MarketPlacePage.afterBiddingClickViewBidBtn()
+                await MarketPlacePage.clickPerform()
+                await MarketPlacePage.validateOngoingText("Ongoing")
+                
+                
+        })
+
+
+
+})
+
+test('Kominiti-106 | Marketplace | Project | View bid | Perform | Validate clicking on view project redirect to project overview',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+        await test.step('Go to the url', async () => {
+                await page.goto(ENV.BASE_URL);
+        })
+        await test.step('Click On sign In Button', async () => {
+                await loginPage.clickSignInBtn()
+        })
+        await test.step('User Login Functionality', async () => {
+                await loginPage.userlogin(ENV.EMAIL, ENV.PASSWORD)
+                await page.waitForLoadState("networkidle")
+        })
+    
+        //marketplace
+        await test.step('Marketplace redirects on click',async () => {
+               await MarketPlacePage.clickOnMarketPlaceToRedirct()
+               await page.waitForLoadState("networkidle") 
+               
+                    
+        })
+        
+        
+        
+        //Project to repost on wall and check Can not post in 15min
+        await test.step("Click and check the view project redirect to project",async () => {
+                await MarketPlacePage.clickTextCricket()
+                await MarketPlacePage.afterBiddingClickViewBidBtn()
+                await MarketPlacePage.clickPerform()
+                await MarketPlacePage.clickViewProject()
+                
+        })
+
+        await test.step("Validate the next page as Overview",async () => { 
+                await MarketPlacePage.clickOverviewAfterCancelPlaceBid("Overview")
+                
+        }) 
 
 
 })

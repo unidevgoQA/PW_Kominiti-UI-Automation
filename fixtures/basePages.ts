@@ -3,14 +3,14 @@ import LoginPage from "pages/Login.page";
 import { test as baseTest } from "@playwright/test";
 import { Page } from "@playwright/test";
 import MarketPlacePage from "pages/MarketPlace.page";
-import NewPage from "pages/NewPage.page";
+import HotDeals from "pages/HotDeals.page";
 
 
 
 const test = baseTest.extend<{
     loginPage: LoginPage;
     MarketPlacePage: MarketPlacePage;
-    newpage: NewPage;
+    HotDeals: HotDeals;
 
 }>({
 
@@ -22,8 +22,8 @@ const test = baseTest.extend<{
         await use(new MarketPlacePage(page));
     },
 
-    newpage: async ({ page },use) => {
-        await use(new NewPage(page));
+    HotDeals: async ({ page },use) => {
+        await use(new HotDeals(page));
     }
 
 
