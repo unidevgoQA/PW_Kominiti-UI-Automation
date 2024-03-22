@@ -63,10 +63,49 @@ export default class HotDeals{
            
             //add question
             OfferFirst: "(//div[@class='label-cell'])[1]",
-            AddQuestion: "(//button[@type='button'])[1]",
+            AddQuestionbtn: "(//button[@type='button'])[1]",
             AddQusTextarea: "textarea[name='qamodalquestion']",
             SendBtn: "//button[text()='Send']",
-            QuestionAdded:"div.question"
+            QuestionAdded:"(//div[@class='question-row'])[1]",
+
+            //create deal cancel button 
+            CancelBtn: "button.btnbox-cancel",
+
+            //view all categories
+            ViewAllCategoriesBtn: "//div[@class='new-review-page__section-titles']//a[1]",
+            AccountNFinanceCat: "//p[text()='Accounting & Finance']",
+            AdminSupportCat:"//p[text()='Admin Support']",
+            ConsultingCat:"(//p[@class='inner-one'])[3]",
+            CustomerServiceCat:"(//p[@class='inner-one'])[4]",
+            DataSciAnalystCat:"(//p[@class='inner-one'])[5]",
+            DigitalMarkCat:"(//p[@class='inner-one'])[6]",
+            EngineeringArcCat:"(//p[@class='inner-one'])[7]",
+            GraphicCat:"(//p[@class='inner-one'])[8]",
+            ITnNetworkCat:"(//p[@class='inner-one'])[9]",
+            LegalCat:"(//p[@class='inner-one'])[10]",
+            SalesMarketCat:"(//p[@class='inner-one'])[11]",
+            TranslationCat:"(//p[@class='inner-one'])[12]",
+            WebCat:"(//p[@class='inner-one'])[13]",
+            WrintingCat:"(//p[@class='inner-one'])[14]",
+            HeaderText: "//div[@class='accounting__header-wrap']//h1[1]",
+
+
+            //Contact Buyer
+            offerFourth: "(//div[@class='label-cell'])[4]",
+            ContactBuyersBtn: "//button[@class='action-button square']",
+            MessageBoxBuyers: "//div[@class='user-name']//h3[1]",
+
+
+            //order Purchases
+            PurchaseOrder: "(//button[@as='button'])[2]",
+            ConfirmPayment: "//button[text()='Confirm Payment']",
+            PaymentSuccessful: "//div[@class='settings-account--notice-modals-content']//h3[1]",
+
+            //Cancel purchase
+            CancelPurchase: "//div[@class='payment-actions--row']//button[1]",
+            ConfirmCancel: "//button[@class='action-button square']",
+            AboutBuyers: "//div[@class='default-page-layout--cell__head']//h2[1]",
+
 
 
 
@@ -78,7 +117,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals redirect
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Validate Hot Deals redirect
         async clickHotDealsRedirects() {
@@ -93,10 +132,10 @@ export default class HotDeals{
         }
 
         // Module Name: Kominiti | Hot Deals | Categories
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Click view all categories
-        async clickCategories() {
+        async clickViewAllCategories() {
                 const Categories = await this.page.locator(this.HotDealsElements.Categories)
                 try {
     
@@ -110,7 +149,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Categories | Validate categories
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Validate categories url are showing
         async validateAccountNFinanceURL() {
@@ -125,7 +164,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Clicking create a deal
 
@@ -141,7 +180,7 @@ export default class HotDeals{
     
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: inputting in Offer title
     async inputOfferTitlte(value:string) {
@@ -158,7 +197,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Inputting in Offer Category
     async inputOfferCategory(value:string) {
@@ -174,7 +213,7 @@ export default class HotDeals{
     }
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: inputting in Offer sub category
     async inputOfferSubCategory(value:string) {
@@ -192,7 +231,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: inputting in Offer type
     async inputOfferType() {
@@ -212,7 +251,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: inputting in offer close date
     async inputOfferCloseDate(value:string) {
@@ -228,7 +267,7 @@ export default class HotDeals{
     }
 
      // Module Name: Kominiti | Hot Deals | Create a deal | Overview 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: inputting in Keyword
     async inputKeyword(value:string) {
@@ -246,7 +285,7 @@ export default class HotDeals{
     }
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Clicking the add keyword button
     async clickAddKeywordBtn() {
@@ -261,7 +300,7 @@ export default class HotDeals{
     }
 
        // Module Name: Kominiti | Hot Deals | Create a deal | Overview 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Clicked Save and Continue button
 
@@ -280,7 +319,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Inputting value in package name
 
@@ -299,7 +338,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Inputting value in Package Description
     async inputPackageDescription(value:string) {
@@ -315,7 +354,7 @@ export default class HotDeals{
     }
  
       // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Inputting value in Price
     async inputPrice(value:string) {
@@ -332,7 +371,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Inputting value in Duration
     async inputDuration(value:string) {
@@ -348,7 +387,7 @@ export default class HotDeals{
     }
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Inputting value in Description & FAQ
     async inputofferDescription(value:string) {
@@ -365,7 +404,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type | Requirements
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Inputting value in Your question
     async inputYourQuestion(value:string) {
@@ -382,7 +421,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type | Requirements
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Inputting value in Your Qusestion Option
     async inputYourQusOption(value:string) {
@@ -399,7 +438,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Image
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Image upload
 
@@ -411,7 +450,7 @@ export default class HotDeals{
     }
 
         // Module Name: Kominiti | Video
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Video upload
     async videoUpoadFunction() {
@@ -423,7 +462,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | PDF
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: PDF upload
     async pdfUploadFunction() {
@@ -435,7 +474,7 @@ export default class HotDeals{
 
 
         // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type | Requirements | Gallery (Image) 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Image upload
     async clickGalleryImage() {
@@ -450,7 +489,7 @@ export default class HotDeals{
     }
 
      // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type | Requirements | Gallery (Video) 
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Video Upload
     async clickGalleryVideo() {
@@ -465,7 +504,7 @@ export default class HotDeals{
     }
 
      // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type | Requirements | Gallery (Docs)
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Document Upload
     async clickGalleryDocs() {
@@ -480,7 +519,7 @@ export default class HotDeals{
     }
 
     // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type | Requirements | Gallery | Preview and Submit
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Checkbox to be checked
     async clickCheckboxFinalSave() {
@@ -497,7 +536,7 @@ export default class HotDeals{
     }
 
       // Module Name: Kominiti | Hot Deals | Create a deal | Overview  | Deals type | Requirements | Preview and Submit
-        // Feature Name: Marketplace
+        // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Preview and Submit
     async clickSubmitBtn() {
@@ -513,13 +552,16 @@ export default class HotDeals{
         }   
     }
 
-    //..
+        // Module Name: Kominiti | Hot Deals | Offer
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: click first offer
     
     async clickOfferFirst() {
-        const AddQuestion = await this.page.locator(this.HotDealsElements.AddQuestion)
+        const OfferFirst = await this.page.locator(this.HotDealsElements.OfferFirst)
         try {
 
-            await AddQuestion.click({ button: "left", delay: 100 })
+            await OfferFirst.click({ button: "left", delay: 100 })
 
 
         } catch (error) {
@@ -528,12 +570,16 @@ export default class HotDeals{
     }
 
 
+         // Module Name: Kominiti | Hot Deals | Offer | Add Question 
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: click Add Question button
 
-    async clickAddQuestion() {
-        const AddQuestion = await this.page.locator(this.HotDealsElements.AddQuestion)
+    async clickAddQuestionbtn() {
+        const AddQuestionbtn = await this.page.locator(this.HotDealsElements.AddQuestionbtn)
         try {
 
-            await AddQuestion.click({ button: "left", delay: 100 })
+            await AddQuestionbtn.click({ button: "left", delay: 100 })
             
 
         } catch (error) {
@@ -541,6 +587,10 @@ export default class HotDeals{
         }   
     }
 
+        // Module Name: Kominiti | Hot Deals | Offer | Add Question | Input textarea
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click and give input Input textarea
 
     async inputAddQusTextarea(value:string) {
         const AddQusTextarea = await this.page.locator(this.HotDealsElements.AddQusTextarea)
@@ -550,12 +600,434 @@ export default class HotDeals{
             await AddQusTextarea.fill(value)
 
         } catch (error) {
-        throw new Error(`Home Page | Hot Deals | Offer | add question | Could Not Find Locator:"${error}"`)
+        throw new Error(`Home Page | Hot Deals | Offer | add question | Input textarea | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+         // Module Name: Kominiti | Hot Deals | Offer | Add Question | Input textarea | Send button 
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: click Send button 
+
+    async inputSendBtn() {
+        const SendBtn = await this.page.locator(this.HotDealsElements.SendBtn)
+        try {
+
+            await SendBtn.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Offer | add question | Send button | Could Not Find Locator:"${error}"`)
         }   
     }
 
 
+        // Module Name: Kominiti | Hot Deals | Offer | Add Question | Validate add question
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Validate add question
+    async validateQuestionAdded(value:string){
+        const QuestionAdded= await this.page.locator(this.HotDealsElements.QuestionAdded)
 
+        try {
+            expect(QuestionAdded).toHaveText(value)
+            
+        } catch (error) {
+            throw new Error(`Home Page | Hot Deals | Offer | Validate comment in add question | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+
+        // Module Name: Kominiti | Hot Deals | Offer | Cancel
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click the cancel button of offer
+
+    async clickCancelBtn() {
+        const CancelBtn = await this.page.locator(this.HotDealsElements.CancelBtn)
+        try {
+
+            await CancelBtn.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Create Deals | Overview | Deals type | Description & FAQ | Requirments | Gallery | cancel | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+        // Module Name: Kominiti | Hot Deals | Categories | Accounting & Finance 
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Accounting & Finance
+
+    async clickAccountNFinanceCat() {
+        const AccountNFinanceCat = await this.page.locator(this.HotDealsElements.AccountNFinanceCat)
+        try {
+
+            await AccountNFinanceCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Accounting & Finance | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+        // Module Name: Kominiti | Hot Deals | Categories | Header
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Validate Header
+    
+    async validateHeaderText(value:string){
+        const HeaderText= await this.page.locator(this.HotDealsElements.HeaderText).textContent()
+
+        try {
+            expect(HeaderText.includes(value)).toBeTruthy()
+            
+        } catch (error) {
+            throw new Error(`Home Page | Hot Deals | View all categories |  Validate Header | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+     // Module Name: Kominiti | Hot Deals | Categories | Admin Support 
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Admin Support
+
+    async clickAdminSupportCat() {
+        const AdminSupportCat = await this.page.locator(this.HotDealsElements.AdminSupportCat)
+        try {
+
+            await AdminSupportCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Admin Support | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+        // Module Name: Kominiti | Hot Deals | Categories | Consulting
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Consulting
+    async clickConsultingCat() {
+        const ConsultingCat = await this.page.locator(this.HotDealsElements.ConsultingCat)
+        try {
+
+            await ConsultingCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Consulting | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+        // Module Name: Kominiti | Hot Deals | Categories | Customer Service 
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Customer Service
+    async clickCustomerServiceCat() {
+        const CustomerServiceCat = await this.page.locator(this.HotDealsElements.CustomerServiceCat)
+        try {
+
+            await CustomerServiceCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Customer Service | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+
+    // Module Name: Kominiti | Hot Deals | Categories | Data Science & Analyst
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Data Science & Analyst
+    async clickDataSciAnalystCat() {
+        const DataSciAnalystCat = await this.page.locator(this.HotDealsElements.DataSciAnalystCat)
+        try {
+
+            await DataSciAnalystCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Data Science & Analyst | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+    // Module Name: Kominiti | Hot Deals | Categories | Digital Market
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Digital Market
+    async clickDigitalMarkCat() {
+        const DigitalMarkCat = await this.page.locator(this.HotDealsElements.DigitalMarkCat)
+        try {
+
+            await DigitalMarkCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Digital Market | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+    // Module Name: Kominiti | Hot Deals | Categories | Engineering and Archetecture
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Engineering and Archetecture
+
+    async clickEngineeringArcCat() {
+        const EngineeringArcCat = await this.page.locator(this.HotDealsElements.EngineeringArcCat)
+        try {
+
+            await EngineeringArcCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Engineering and Archetecture | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+    // Module Name: Kominiti | Hot Deals | Categories | Graphics desgin 
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Graphics desgin 
+    async clickGraphicCatt() {
+        const GraphicCat = await this.page.locator(this.HotDealsElements.GraphicCat)
+        try {
+
+            await GraphicCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Graphics desgin | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+    // Module Name: Kominiti | Hot Deals | Categories | IT and Network  
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click IT and Network 
+    async clickITnNetworkCat() {
+        const ITnNetworkCat = await this.page.locator(this.HotDealsElements.ITnNetworkCat)
+        try {
+
+            await ITnNetworkCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | IT and Network | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+
+    // Module Name: Kominiti | Hot Deals | Categories | Legal
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Legal
+    async clickLegalCat() {
+        const LegalCat = await this.page.locator(this.HotDealsElements.LegalCat)
+        try {
+
+            await LegalCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Legal | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+
+    // Module Name: Kominiti | Hot Deals | Categories | Sales and Marketing 
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Sales and Marketing
+    async clickSalesMarketCat() {
+        const SalesMarketCat = await this.page.locator(this.HotDealsElements.SalesMarketCat)
+        try {
+
+            await SalesMarketCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Sales and Marketing | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+
+    // Module Name: Kominiti | Hot Deals | Categories | Translation 
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Translation
+    async clickTranslationCat() {
+        const TranslationCat = await this.page.locator(this.HotDealsElements.TranslationCat)
+        try {
+
+            await TranslationCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Translation | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+    // Module Name: Kominiti | Hot Deals | Categories | Web, Mobile and Software dev
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Web, Mobile and Software dev
+
+    async clickWebCat() {
+        const WebCat = await this.page.locator(this.HotDealsElements.WebCat)
+        try {
+
+            await WebCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Web, Mobile and Software dev | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+    // Module Name: Kominiti | Hot Deals | Categories | Wrinting
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Wrinting
+
+    async clickWrintingCat() {
+        const WrintingCat = await this.page.locator(this.HotDealsElements.WrintingCat)
+        try {
+
+            await WrintingCat.click({ button: "left", delay: 100 })
+
+        } catch (error) {
+        throw new Error(`Home Page | Hot Deals | Categories | Wrinting | Could Not Find Locator:"${error}"`)
+        }   
+    }
+
+        // Module Name: Kominiti | Hot Deals | Offer 
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click an offer
+
+    async clickofferFourth(){
+        const offerFourth= await this.page.locator(this.HotDealsElements.offerFourth)
+        try {
+            await offerFourth.click({ button: "left", delay: 100})
+           
+        } catch (error) {
+            throw new Error(`Home Page |  Hot Deals | Offer | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+
+        // Module Name: Kominiti | Hot Deals | Offer | Contact buyer
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Contact buyer
+    async clickContactBuyersBtn(){
+        const ContactBuyersBtn= await this.page.locator(this.HotDealsElements.ContactBuyersBtn)
+        try {
+            await ContactBuyersBtn.click({ button: "left", delay: 100})
+           
+        } catch (error) {
+            throw new Error(`Home Page |  Hot Deals | Offer | Contact buyer | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+
+     // Module Name: Kominiti | Hot Deals | Offer | Contact buyer | Message Box
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Validate Message Box
+    async validateMessageBoxBuyers(){
+        const MessageBoxBuyers= await this.page.locator(this.HotDealsElements.MessageBoxBuyers)
+        try {
+
+            expect(MessageBoxBuyers).toBeVisible();
+           
+        } catch (error) {
+            throw new Error(`Home Page | Hot Deals | Offer | Contact buyers | Message Box | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+
+    // Module Name: Kominiti | Hot Deals | Offer | Contact buyer | Purchase
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Purchase
+    async clickPurchaseOrder(){
+        const PurchaseOrder= await this.page.locator(this.HotDealsElements.PurchaseOrder)
+        try {
+            await PurchaseOrder.click({ button: "left", delay: 100})
+           
+        } catch (error) {
+            throw new Error(`Home Page |  Hot Deals | Offer | Purchase | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+
+    // Module Name: Kominiti | Hot Deals | Offer | Contact buyer | Purchase | confirm
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click confirm
+
+    async clickConfirmPayment(){
+        const ConfirmPayment= await this.page.locator(this.HotDealsElements.ConfirmPayment)
+
+        try {
+            await ConfirmPayment.click({ button: "left", delay: 100})
+            
+        } catch (error) {
+            throw new Error(`Home Page | Hot Deals | Offer | Purchase | Confirm | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+
+    // Module Name: Kominiti | Hot Deals | Offer | Contact buyer | Purchase Confirm | Payment Successful
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Validate Payment Successful
+    async validatePaymentSuccessful(value:string){
+        const PaymentSuccessful= await this.page.locator(this.HotDealsElements.PaymentSuccessful).textContent()
+
+        try {
+            expect(PaymentSuccessful.includes(value)).toBeTruthy()
+            
+        } catch (error) {
+            throw new Error(`Home Page | Hot Deals | Offer | Purchase | Confirm | Payment Successful | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+
+    // Module Name: Kominiti | Hot Deals | Offer | Contact buyer | Purchase | Cancel
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click Cancel
+    async clickCancelPurchase(){
+        const CancelPurchase= await this.page.locator(this.HotDealsElements.CancelPurchase)
+
+        try {
+            await CancelPurchase.click({ button: "left", delay: 100})
+            
+        } catch (error) {
+            throw new Error(`Home Page | Hot Deals | Offer | Purchase | Cancel | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+ 
+     // Module Name: Kominiti | Hot Deals | Offer | Contact buyer | Purchase | Cancel | confirm Canel
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: Click confirm Canel
+    async clickConfirmCancel(){
+        const ConfirmCancel= await this.page.locator(this.HotDealsElements.ConfirmCancel)
+
+        try {
+            await ConfirmCancel.click({ button: "left", delay: 100})
+            
+        } catch (error) {
+            throw new Error(`Home Page | Hot Deals | Offer | Purchase | Cancel | Confirm Cancel | Could Not Find Locator:"${error}"`)
+        }
+    }
+
+     // Module Name: Kominiti | Hot Deals | Offer | Contact buyer | Purchase | Cancel | confirm Canel | about Buyers
+        // Feature Name: Hot Deals
+        // Screen Type: Desktop
+        // Description: validate about Buyers
+    async validateAboutBuyers(){
+        const AboutBuyers= await this.page.locator(this.HotDealsElements.AboutBuyers)
+
+        try {
+            expect(AboutBuyers).toBeVisible()
+            
+        } catch (error) {
+            throw new Error(`Home Page | Hot Deals | Offer | Purchase | Cancel | Confirm Cancel | Could Not Find Locator:"${error}"`)
+        }
+    }
 
 
 

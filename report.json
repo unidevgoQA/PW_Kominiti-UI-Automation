@@ -62,8 +62,8 @@
       "line": 0,
       "specs": [
         {
-          "title": "Kominiti-119 | Hot deals | Create a Deal | User can create a deal succesfully",
-          "ok": false,
+          "title": "Kominiti-143 | Hot deals | Offers | Validate user can cancel the purchase and redirect to offer detial page",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -75,108 +75,44 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 52653,
-                  "error": {
-                    "message": "Error: \u001b[31mTimed out 6000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeChecked\u001b[2m()\u001b[22m\n\nLocator: locator('//input[@id=\\'term\\']')\nExpected: checked\nReceived: unchecked\nCall log:\n  \u001b[2m- expect.toBeChecked with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('//input[@id=\\'term\\']')\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n",
-                    "stack": "Error: \u001b[31mTimed out 6000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeChecked\u001b[2m()\u001b[22m\n\nLocator: locator('//input[@id=\\'term\\']')\nExpected: checked\nReceived: unchecked\nCall log:\n  \u001b[2m- expect.toBeChecked with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('//input[@id=\\'term\\']')\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\n    at HotDeals.clickCheckboxFinalSave (K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\pages\\HotDeals.page.ts:457:45)\n    at K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\tests\\HotDeals.test.ts:154:17\n    at K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\tests\\HotDeals.test.ts:153:9",
-                    "location": {
-                      "file": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\pages\\HotDeals.page.ts",
-                      "column": 45,
-                      "line": 457
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\HotDeals.page.ts:457\n\n\u001b[0m \u001b[90m 455 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 456 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[33mCheckboxFinalSave\u001b[39m\u001b[33m.\u001b[39mclick({ button\u001b[33m:\u001b[39m \u001b[32m\"left\"\u001b[39m\u001b[33m,\u001b[39m delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m\u001b[33m,\u001b[39m force\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m })\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 457 |\u001b[39m             expect(\u001b[36mawait\u001b[39m \u001b[33mCheckboxFinalSave\u001b[39m)\u001b[33m.\u001b[39mtoBeChecked()\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 458 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 459 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\u001b[0m\n\u001b[0m \u001b[90m 460 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Home Page | Hot Deals | Create Deals | Overview | Deals type | Description & FAQ | Requirments | Gallery | Final save | Could Not Find Locator:\"${error}\"`\u001b[39m)\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\pages\\HotDeals.page.ts",
-                        "column": 45,
-                        "line": 457
-                      },
-                      "message": "Error: \u001b[31mTimed out 6000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeChecked\u001b[2m()\u001b[22m\n\nLocator: locator('//input[@id=\\'term\\']')\nExpected: checked\nReceived: unchecked\nCall log:\n  \u001b[2m- expect.toBeChecked with timeout 6000ms\u001b[22m\n\u001b[2m  - waiting for locator('//input[@id=\\'term\\']')\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\u001b[2m  -   locator resolved to <input id=\"term\" name=\"terms\" value=\"false\" type=\"check…/>\u001b[22m\n\u001b[2m  -   unexpected value \"unchecked\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\HotDeals.page.ts:457\n\n\u001b[0m \u001b[90m 455 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 456 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[33mCheckboxFinalSave\u001b[39m\u001b[33m.\u001b[39mclick({ button\u001b[33m:\u001b[39m \u001b[32m\"left\"\u001b[39m\u001b[33m,\u001b[39m delay\u001b[33m:\u001b[39m \u001b[35m100\u001b[39m\u001b[33m,\u001b[39m force\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m })\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 457 |\u001b[39m             expect(\u001b[36mawait\u001b[39m \u001b[33mCheckboxFinalSave\u001b[39m)\u001b[33m.\u001b[39mtoBeChecked()\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 458 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 459 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\u001b[0m\n\u001b[0m \u001b[90m 460 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Home Page | Hot Deals | Create Deals | Overview | Deals type | Description & FAQ | Requirments | Gallery | Final save | Could Not Find Locator:\"${error}\"`\u001b[39m)\u001b[0m\n\n\u001b[2m    at HotDeals.clickCheckboxFinalSave (K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\pages\\HotDeals.page.ts:457:45)\u001b[22m\n\u001b[2m    at K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\tests\\HotDeals.test.ts:154:17\u001b[22m\n\u001b[2m    at K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\tests\\HotDeals.test.ts:153:9\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 43227,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
                   "steps": [
                     {
                       "title": "Go to the url",
-                      "duration": 9567
+                      "duration": 9581
                     },
                     {
                       "title": "Click On sign In Button",
-                      "duration": 401
+                      "duration": 371
                     },
                     {
                       "title": "User Login Functionality",
-                      "duration": 15088
+                      "duration": 13501
                     },
                     {
                       "title": "HotDeals redirects on click",
-                      "duration": 382
+                      "duration": 542
                     },
                     {
-                      "title": "Create a deal is initialized",
-                      "duration": 1149
-                    },
-                    {
-                      "title": "Fill up the Overview form",
-                      "duration": 4608
-                    },
-                    {
-                      "title": "Fill up the Deals Type form",
-                      "duration": 2140
-                    },
-                    {
-                      "title": "Fill up Descritpion and FAQ form",
-                      "duration": 714
-                    },
-                    {
-                      "title": "Fill up Requirements form",
-                      "duration": 1064
-                    },
-                    {
-                      "title": "Upload the gallery",
-                      "duration": 7210
-                    },
-                    {
-                      "title": "checkbox and submit",
-                      "duration": 9792,
-                      "error": {
-                        "message": "Error: Home Page | Hot Deals | Create Deals | Overview | Deals type | Description & FAQ | Requirments | Gallery | Submit | Could Not Find Locator:\"Error: locator.scrollIntoViewIfNeeded: Test ended.\nCall log:\n  \u001b[2m- waiting for locator('button[type=\\'submit\\']')\u001b[22m\n\"",
-                        "stack": "Error: Home Page | Hot Deals | Create Deals | Overview | Deals type | Description & FAQ | Requirments | Gallery | Submit | Could Not Find Locator:\"Error: locator.scrollIntoViewIfNeeded: Test ended.\nCall log:\n  \u001b[2m- waiting for locator('button[type=\\'submit\\']')\u001b[22m\n\"\n    at HotDeals.clickSubmitBtn (K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\pages\\HotDeals.page.ts:473:15)\n    at K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\tests\\HotDeals.test.ts:157:17\n    at K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\tests\\HotDeals.test.ts:153:9",
-                        "location": {
-                          "file": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\pages\\HotDeals.page.ts",
-                          "column": 15,
-                          "line": 473
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\HotDeals.page.ts:473\n\n\u001b[0m \u001b[90m 471 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 472 |\u001b[39m         } \u001b[36mcatch\u001b[39m (error) {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 473 |\u001b[39m         \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Home Page | Hot Deals | Create Deals | Overview | Deals type | Description & FAQ | Requirments | Gallery | Submit | Could Not Find Locator:\"${error}\"`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 474 |\u001b[39m         }   \u001b[0m\n\u001b[0m \u001b[90m 475 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 476 |\u001b[39m\u001b[0m"
-                      }
+                      "title": "Cancel the payment",
+                      "duration": 13566
                     }
                   ],
-                  "startTime": "2024-03-21T10:36:01.779Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\HotDeals-Kominiti-119-Hot-deals-Create-a-Deal-User-can-create-a-deal-succesfully\\test-failed-1.png"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\pages\\HotDeals.page.ts",
-                    "column": 45,
-                    "line": 457
-                  }
+                  "startTime": "2024-03-22T10:26:47.275Z",
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "abcbeba2334af264da1d-f2533074f53b9e0128a6",
+          "id": "abcbeba2334af264da1d-3454a1bf9d383933ca9a",
           "file": "HotDeals.test.ts",
-          "line": 67,
+          "line": 457,
           "column": 6
         }
       ]
@@ -184,11 +120,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-03-21T10:36:00.055Z",
-    "duration": 55254.335,
-    "expected": 0,
+    "startTime": "2024-03-22T10:26:45.400Z",
+    "duration": 45901.542,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

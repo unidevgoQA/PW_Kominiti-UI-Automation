@@ -8,8 +8,8 @@ const config: PlaywrightTestConfig = {
   globalSetup: "utils/global-setup.ts",
   testDir: "./tests",
   testMatch: [
-    //"login.test.ts",
-    //"MarketPlace.test.ts",
+    "login.test.ts",
+    "MarketPlace.test.ts",
     "HotDeals.test.ts"
 
 
