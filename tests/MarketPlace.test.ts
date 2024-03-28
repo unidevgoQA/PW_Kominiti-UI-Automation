@@ -8,6 +8,16 @@ import { title } from 'process'
 
 test('Kominiti-065 | Marketplace | Validate that the user redirect to adding page when create project is clicked', async ({page, loginPage, MarketPlacePage}) => {
 
+/*
+        This test case verifies that an user can redirect to the Marketplace page successfully
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Verify that the create a project is redirected to the adding page
+*/
+  
     await test.step('Go to the url', async () => {
             await page.goto(ENV.BASE_URL);
     })
@@ -36,6 +46,33 @@ test('Kominiti-065 | Marketplace | Validate that the user redirect to adding pag
 })
 
 test('Kominiti-066 | Marketplace | Validate that the mandatory field warnings are showing and user can fillup Overview and save & continue to next stage', async ({page, loginPage, MarketPlacePage}) => {
+
+
+/*
+        This test case verifies that an user can fill up Overview and proceed to the next stage
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Fill up the Overview
+        - Procceed to the next stage by clikcing Save & Continue button
+*/
+
+/*
+        This test case validates that the mandatory field is showing waring if left empty and clicking save & continue
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Click Save & Continue and procceed 
+        - Verify that the Overview mandatory field is showing warning.
+        
+*/
+
+
+
 
     await test.step('Go to the url', async () => {
             await page.goto(ENV.BASE_URL);
@@ -84,6 +121,32 @@ test('Kominiti-066 | Marketplace | Validate that the mandatory field warnings ar
 })
 
 test('Kominiti-067 | Marketplace | Create project | Validate that the mandatory field warnings are showing and user can fillup Description & FAQ (with add question)  and save & continue to next stage ', async ({page, loginPage, MarketPlacePage}) => {
+
+
+/*
+        This test case verifies that an user can fill up Description & FAQ and proceed to the next stage
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Fill up the Description & FAQ
+        - Procceed to the next stage by clikcing Save & Continue button
+*/
+
+/*
+        This test case validates that the mandatory field is showing waring if left empty and clicking save & continue
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Click Save & Continue and procceed 
+        - Verify that the Description & FAQ mandatory field is showing warning.
+        
+*/
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -147,6 +210,30 @@ test('Kominiti-067 | Marketplace | Create project | Validate that the mandatory 
 })
 
 test('Kominiti-068 | Marketplace | Create project | Validate that the user can select from dropdown in pricing and save & continue to next stage ', async ({page, loginPage, MarketPlacePage}) => {
+
+/*
+        This test case verifies that an user can fill up Pricing and proceed to the next stage
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Fill up the Pricing
+        - Procceed to the next stage by clikcing Save & Continue button
+*/
+
+/*
+        This test case validates that the mandatory field is showing waring if left empty and clicking save & continue
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Click Save & Continue and procceed 
+        - Verify that the Pricing mandatory field is showing warning.
+        
+*/
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -215,7 +302,34 @@ test('Kominiti-068 | Marketplace | Create project | Validate that the user can s
     
 })
 
-test('Kominiti-069 | Marketplace | Create project | Marketplace | Create Project |  Validate that the mandatory field warnings are showing and user can fillup RequirementsDeadlinesDrpdn and save & continue to next stage ', async ({page, loginPage, MarketPlacePage}) => {
+test('Kominiti-069 | Marketplace | Create project | Marketplace | Create Project |  Validate that the mandatory field warnings are showing and user can fillup Requirements and save & continue to next stage ', async ({page, loginPage, MarketPlacePage}) => {
+
+
+/*
+        This test case verifies that an user can fill up Requirements and proceed to the next stage
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Fill up the Requirements
+        - Procceed to the next stage by clikcing Save & Continue button
+*/
+
+/*
+        This test case validates that the mandatory field is showing warning if left empty and clicking save & continue
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Click Save & Continue and procceed 
+        - Verify that the Requirements mandatory field is showing warning.
+        
+*/
+
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -298,6 +412,33 @@ test('Kominiti-069 | Marketplace | Create project | Marketplace | Create Project
 
 test('Kominiti-070 | Marketplace | Create Project | Validate gallery that the mandatory field warnings are showing and user can upload photo in attachment and save & continue to next stage ', async ({page, loginPage, MarketPlacePage}) => {
 
+
+/*
+        This test case verifies that an user can fill up Upload and proceed to the next stage
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Fill up the Upload
+        - Procceed to the next stage by clikcing Save & Continue button
+*/
+
+/*
+        This test case validates that the mandatory field is showing warning if left empty and clicking save & continue
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Click Save & Continue and procceed 
+        - Verify that the Upload mandatory field is showing warning.
+        
+*/
+
+
+      
+      
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -399,6 +540,21 @@ test('Kominiti-070 | Marketplace | Create Project | Validate gallery that the ma
 })
 
 test('Kominiti-072 | Marketplace | Create Project | Validate cancelling the project successfully cancelled ', async ({page, loginPage, MarketPlacePage}) => {
+
+/*
+        This test case verifies that an user can fill up Requirements and proceed to the next stage
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Fill up all the steps
+        - Procceed to the next stage by clikcing Save & Continue button
+        - Validate cancelling the project successfully cancelled
+*/
+
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -515,6 +671,21 @@ test('Kominiti-072 | Marketplace | Create Project | Validate cancelling the proj
 
 
 test('Kominiti-073 | Marketplace | Create Project | Validate Project is successfully saved ', async ({page, loginPage, MarketPlacePage}) => {
+
+
+/*
+        This test case verifies that an user can fill up all the steps and saved the project 
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to the Create a project
+        - Fill up all the steps.
+        - Procceed to the next stage by clikcing Save & Continue button
+        - Validate Project is successfully saved.
+*/
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -636,6 +807,22 @@ test('Kominiti-073 | Marketplace | Create Project | Validate Project is successf
 
 test('Kominiti-075 | Marketplace | Project | Share | Validate when user post "repost on your wall" it should appear on home dashboard',async ({page, loginPage, MarketPlacePage}) => {
 
+
+/*
+        This test case verifies that an user can "repost on your wall"
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click share option
+        - Click and Execute repost on your wall
+        - Validate that the post appear in the dashboard
+*/
+
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -685,6 +872,19 @@ test('Kominiti-075 | Marketplace | Project | Share | Validate when user post "re
 
 test('Kominiti-076 | Marketplace | Project | Share | Validate clicking reset on "repost on your wall" revert the changes',async ({page, loginPage, MarketPlacePage}) => {
 
+
+/*
+        This test case verifies that an user can "repost on your wall"
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click share option
+        - Click cancel/revert the change
+        - Validate that the repost on your wall is reverted
+*/
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -722,6 +922,20 @@ test('Kominiti-076 | Marketplace | Project | Share | Validate clicking reset on 
 })
 
 test('Kominiti-077 | Marketplace | Project | Share | Validate user can not post "repost on your wall" within 15min of a recent post',async ({page, loginPage, MarketPlacePage}) => {
+
+/*
+        This test case verifies that an user can "repost on your wall"
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click share option
+        - Click and Execute repost on your wall
+        - Validate that the warning not to post within 15min appeared
+*/
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -765,6 +979,23 @@ test('Kominiti-077 | Marketplace | Project | Share | Validate user can not post 
 
 
 test('Kominiti-078 | Marketplace | Project | Share | Validate user can Share on social media (fb, twitter, pinterest, LinkedIn) and share link',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+        
+
+/*
+        This test case verifies that an user can share post in social media
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click on a project
+        - Click share option
+        - Click share with social media
+        - Click on facebook, Twitter, Pinterest or LinkedIN
+        - Validate that the post share redirect to the share with link
+*/
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -833,6 +1064,19 @@ test('Kominiti-078 | Marketplace | Project | Share | Validate user can Share on 
 
 test('Kominiti-079 Marketplace | Project | Validate user can view the attached files',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+
+/*
+        This test case verifies that an user can find the attached files in the post after posting is successful
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Find the post with the attached file
+        - Validate that the attached files is seen inside the post
+*/
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -869,6 +1113,19 @@ test('Kominiti-079 Marketplace | Project | Validate user can view the attached f
 })
 
 test('Kominiti-080 | Marketplace | Project | Validate user can Add Question on FAQ.',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Add a question by clicking Add question
+        - Validate that the question is added
+*/
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -919,6 +1176,19 @@ test('Kominiti-080 | Marketplace | Project | Validate user can Add Question on F
 })
 
 test('Kominiti-081 | Marketplace | Project | Validate user can Edit and delete question on FAQ.',async ({page, loginPage, MarketPlacePage,  browser}) => {
+
+
+/*
+        This test case verifies that an user can edit and delete a question of a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Edit/delete a question by clicking edit/delete option
+        - Validate that the question is Edited and deleted
+*/
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -973,6 +1243,19 @@ test('Kominiti-081 | Marketplace | Project | Validate user can Edit and delete q
 
 test('Kominiti-082 | Marketplace | Project | Validate message box open when contact buyer is clicked.',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click on Cntract buyers
+        - Validate that the message box is opened
+*/
+    
+
+    
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1016,6 +1299,21 @@ test('Kominiti-082 | Marketplace | Project | Validate message box open when cont
 })
 
 test('Kominiti-083 Marketplace | Project | Validate that see more is working',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click on See more
+        - Validate that the see more is expanded
+*/
+
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1061,6 +1359,21 @@ test('Kominiti-083 Marketplace | Project | Validate that see more is working',as
 
 test('Kominiti-084 | Marketplace | Project | Validate owner "view profile" redirects to profile',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a own project
+        - Click on View profile
+        - Validate that the view profile redirects to the profile page
+*/
+
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1103,6 +1416,19 @@ test('Kominiti-084 | Marketplace | Project | Validate owner "view profile" redir
 })
 
 test('Kominiti-085 | Marketplace | Project | Place bid | Validate user can place bid',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click on place bid
+        - Validate that the user can place a bid successfully.
+*/
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1156,6 +1482,20 @@ test('Kominiti-085 | Marketplace | Project | Place bid | Validate user can place
 
 test('Kominiti-086 | Marketplace | Project | Validate that after bid is placed user can edit bid',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click on Edit bid (if already a bid is placed)
+        - Validate that the user can edit a bid successfully.
+*/
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1205,6 +1545,20 @@ test('Kominiti-086 | Marketplace | Project | Validate that after bid is placed u
 
 test('Kominiti-087 | Marketplace | Project | Validate that after bid is placed user can Delete bid',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click on Delete bid (if already a bid is placed)
+        - Validate that the user can delete a bid successfully.
+*/
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1251,6 +1605,22 @@ test('Kominiti-087 | Marketplace | Project | Validate that after bid is placed u
 
 test('Kominiti-088 | Marketplace | Project | Place bid | Validate that when cancel button is clicked it canceled the bid and redirects to overview',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click on place bid.
+        - Cancel a bid.
+        - Validate that the user can cancel a bid successfully.
+*/
+
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1292,6 +1662,20 @@ test('Kominiti-088 | Marketplace | Project | Place bid | Validate that when canc
 
 
 test('Kominiti-090 | Marketplace | Project | Validate that the manage bid button redirect to dashboard to view details',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project
+        - Click on place bid my user.
+        - Click on Manage bid.
+        - Validate that the user can Manage a bid successfully.
+*/
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1335,6 +1719,19 @@ test('Kominiti-090 | Marketplace | Project | Validate that the manage bid button
 
 test('Kominiti-091 | Marketplace | View all categories | Validate Account & Finance tab is working ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a View all categories
+        - Click on account & finance tab
+        - Validate that the user redirect to categories account & finance.
+*/
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1366,6 +1763,21 @@ test('Kominiti-091 | Marketplace | View all categories | Validate Account & Fina
 })
 
 test('Kominiti-092 | Marketplace | View all categories | Validate Web, Mobile & Software Dev tab is working ',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a View all categories
+        - Click on Web, Mobile & Software Dev
+        - Validate that the user redirect to categories Web, Mobile & Software Dev.
+*/
+
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1405,6 +1817,18 @@ test('Kominiti-092 | Marketplace | View all categories | Validate Web, Mobile & 
 
 test('Kominiti-093 | Marketplace | View all categories | Validate Data Science & Analytics is working ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a View all categories
+        - Click on Data Science & Analytics tab
+        - Validate that the user redirect to categories Data Science & Analytics.
+*/
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1442,6 +1866,21 @@ test('Kominiti-093 | Marketplace | View all categories | Validate Data Science &
 })
 
 test('Kominiti-094 | Marketplace | View all categories | Validates Consulting is working ',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a View all categories
+        - Click on Consulting tab
+        - Validate that the user redirect to categories Consulting.
+*/
+        
+
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1481,6 +1920,19 @@ test('Kominiti-094 | Marketplace | View all categories | Validates Consulting is
 
 test('Kominiti-095 | Marketplace | View all categories | Validates Admin support is working  ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a View all categories
+        - Click on Admin support tab
+        - Validate that the user redirect to categories Admin support.
+*/        
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1519,6 +1971,20 @@ test('Kominiti-095 | Marketplace | View all categories | Validates Admin support
 
 test('Kominiti-096 | Marketplace | Validate redirect to Category details is working in search field  ',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+        
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Input the search field and click search
+        - Search will execute and redirect to category details page
+        - Validate that the user redirect to the category deatils page successfully .
+*/
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1549,6 +2015,19 @@ test('Kominiti-096 | Marketplace | Validate redirect to Category details is work
 })
 
 test('Kominiti-097 | Marketplace |  Category details | Sort by dropdown is working  ',async ({page, loginPage, MarketPlacePage,browser}) => {
+
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Input the search field and click search
+        - Search will execute and redirect to category details page
+        - Validate that the user intereacts with the filter by sort dropdown .
+*/
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1593,6 +2072,19 @@ test('Kominiti-097 | Marketplace |  Category details | Sort by dropdown is worki
 })
 
 test('Kominiti-098 | Marketplace |  Category details | Validate filter is working according to every search result',async ({page, loginPage, MarketPlacePage, browser}) => {
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Input the search field and click search
+        - Search will execute and redirect to category details page
+        - Interact with the filter 
+        - Validate that the Filter is working according to every search result.
+*/
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -1655,6 +2147,21 @@ test('Kominiti-098 | Marketplace |  Category details | Validate filter is workin
 
 test('Kominiti-099 | Marketplace |  Category details | Validate filter resest is working',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Input the search field and click search
+        - Search will execute and redirect to category details page
+        - Click reset filter
+        - Validate that the filter is reset successfuly.
+*/
+        
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1716,6 +2223,22 @@ test('Kominiti-099 | Marketplace |  Category details | Validate filter resest is
 
 test('Kominiti-103 | Marketplace | Project | View bid | Validate clicking on Perform redirect to ongoing project',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project where a bid is accepted
+        - Validate that the user can perform to an on going project successfuly.
+*/
+
+
+
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -1753,6 +2276,21 @@ test('Kominiti-103 | Marketplace | Project | View bid | Validate clicking on Per
 
 test('Kominiti-106 | Marketplace | Project | View bid | Perform | Validate clicking on view project redirect to project overview',async ({page, loginPage, MarketPlacePage, browser}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Marketplace Tab.
+        - Click to a project where a bid is accepted.
+        - Click to a view project
+        - Validate that the view project redirects to project overview.
+*/
+
+
+     
+     
+     
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })

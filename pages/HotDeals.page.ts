@@ -872,7 +872,7 @@ export default class HotDeals{
         }   
     }
 
-    // Module Name: Kominiti | Hot Deals | Categories | Wrinting
+    // Module Name: Kominiti | Hot Deals | Categories | Writting
         // Feature Name: Hot Deals
         // Screen Type: Desktop
         // Description: Click Wrinting

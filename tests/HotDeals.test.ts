@@ -6,6 +6,18 @@ import HotDeals from "pages/HotDeals.page";
 
 test('Kominiti-111 | Hot deals | Validate search functionalities is working and showing result if matched',async ({page, loginPage, HotDeals}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Hot deals Tab.
+        - Input the search field and click search
+        - Validate that the filter working successfuly.
+*/
+
+
+
     await test.step('Go to the url', async () => {
             await page.goto(ENV.BASE_URL);
     })
@@ -32,6 +44,18 @@ test('Kominiti-111 | Hot deals | Validate search functionalities is working and 
 })
 
 test('Kominiti-112 | Hot deals | Validate View all categories is working and redirecting to all categories',async ({page, loginPage, HotDeals}) => {
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Hot deals Tab.
+        - Click View all categories
+        - Validate that the user redirect to the categories.
+*/
+
+
 
     await test.step('Go to the url', async () => {
             await page.goto(ENV.BASE_URL);
@@ -63,6 +87,22 @@ test('Kominiti-112 | Hot deals | Validate View all categories is working and red
 })
 
 test('Kominiti-119 | Hot deals | Create a Deal | User can create a deal succesfully',async ({page, loginPage, HotDeals}) => {
+
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Hot deals Tab.
+        - Click Create a deal
+        - Input and follow all the steps
+        - Validate that the user create a deal successfully.
+*/
+
+
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -170,6 +210,19 @@ test('Kominiti-119 | Hot deals | Create a Deal | User can create a deal succesfu
 
 test('Kominiti-120 | Hot deals | Create a Deal | Validate user can preview and include add question',async ({page, loginPage, HotDeals}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Hot deals Tab.
+        - Click Create a deal
+        - Input and follow all the steps
+        - Click to add question
+        - Validate that the user preview and add question.
+*/
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -205,6 +258,19 @@ test('Kominiti-120 | Hot deals | Create a Deal | Validate user can preview and i
 
 test('Kominiti-123 | Hot deals | Create a Deal | Validate user can cancel the hot deals clicking cancel button',async ({page, loginPage, HotDeals}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Hot deals Tab.
+        - Click Create a deal
+        - Input and follow all the steps
+        - Click cancel
+        - Validate that the user cancel a deal from creating.
+*/
+
+        
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -307,7 +373,21 @@ test('Kominiti-123 | Hot deals | Create a Deal | Validate user can cancel the ho
         
     })
 
-test('Kominiti-137 | Hot deals | View all categories| Validate all the are redirecting accurately ',async ({page, loginPage, HotDeals}) => {
+test('Kominiti-137 | Hot deals | View all categories| Validate all the categories are redirecting accurately ',async ({page, loginPage, HotDeals}) => {
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Hot deals Tab.
+        - Click View all categories.
+        - Click every category
+        - Validate that the user can navigate to all the categories are redirecting accurately.
+*/
+
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
@@ -378,8 +458,21 @@ test('Kominiti-137 | Hot deals | View all categories| Validate all the are redir
         
     })
 
-test('Kominiti-140 | Hot deals | Offers | Validate user can Contract Buyerser',async ({page, loginPage, HotDeals}) => {
+test('Kominiti-140 | Hot deals | Offers | Validate user can Contract Buyer',async ({page, loginPage, HotDeals}) => {
 
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Hot deals Tab.
+        - Click to an offer
+        - Click Contact buyers
+        - Validate that the user can message a buyer theorugh message box.
+*/
+
+
+        
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -418,6 +511,20 @@ test('Kominiti-140 | Hot deals | Offers | Validate user can Contract Buyerser',a
 
 test('Kominiti-142 | Hot deals | Offers | Validate user can purchase order and confirm payment with any payment methods',async ({page, loginPage, HotDeals}) => {
 
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Hot deals Tab.
+        - Click to an offer
+        - Click to confirm an offer
+        - Validate that the user can purchase order and confirm payment with any payment methods.
+*/
+
+
+
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
         })
@@ -455,6 +562,22 @@ test('Kominiti-142 | Hot deals | Offers | Validate user can purchase order and c
     })
 
 test('Kominiti-143 | Hot deals | Offers | Validate user can cancel the purchase and redirect to offer detail page',async ({page, loginPage, HotDeals}) => {
+
+/*
+        This test case verifies that an user can Add question to a post
+        It involves the following steps:
+        - Logging in as an user.
+        - Navigating to the Kominiti.
+        - Click to the Hot deals Tab.
+        - Click to an offer
+        - Click to confirm an offer. 
+        - Click Cancel button.
+        - Validate that the user can cancel the purchase and redirect to offer detail page.
+*/
+
+
+
+
 
         await test.step('Go to the url', async () => {
                 await page.goto(ENV.BASE_URL);
