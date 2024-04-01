@@ -1,6 +1,6 @@
 // import LoginPage from "@pages/loginPage";
 import LoginPage from "pages/Login.page";
-import HomePage from "pages/games.page";
+import HomePage from "pages/homepagedashboard.page";
 import { test as baseTest } from "@playwright/test";
 import { Page } from "@playwright/test";
 

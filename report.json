@@ -43,7 +43,9 @@
         "testDir": "D:/Kominiti Automation/PW_Kominiti-UI-Automation/PW_Kominiti-UI-Automation/tests",
         "testIgnore": [],
         "testMatch": [
-          "login.test.ts"
+          "login.test.ts",
+          "dashboard.test.ts",
+          "homepage.test.ts"
         ],
         "timeout": 300000
       }
@@ -56,13 +58,13 @@
   },
   "suites": [
     {
-      "title": "login.test.ts",
-      "file": "login.test.ts",
+      "title": "homepage.test.ts",
+      "file": "homepage.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Kominiti-039 | Home | Validate if campaign invitation can be sent",
+          "title": "Kominiti-014 | Home | Wall | Validate a post can be reposted on the wall via share option",
           "ok": true,
           "tags": [],
           "tests": [
@@ -76,7 +78,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 16257,
+                  "duration": 27800,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -84,31 +86,31 @@
                   "steps": [
                     {
                       "title": "Go to the url",
-                      "duration": 1993
+                      "duration": 1553
                     },
                     {
                       "title": "Click On sign In Button",
-                      "duration": 703
+                      "duration": 627
                     },
                     {
                       "title": "User Login Functionality",
-                      "duration": 5950
+                      "duration": 4713
                     },
                     {
                       "title": "Click on Home button",
-                      "duration": 338
+                      "duration": 300
                     },
                     {
-                      "title": "Home | Validate if campaign invitation can be sent",
-                      "duration": 6189
+                      "title": "Validate a post can be reposted on the wall via share option",
+                      "duration": 19599
                     }
                   ],
-                  "startTime": "2024-03-19T04:46:27.556Z",
+                  "startTime": "2024-03-29T08:51:35.204Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Kominiti Automation\\PW_Kominiti-UI-Automation\\PW_Kominiti-UI-Automation\\test-results\\login-Kominiti-039-Home-Validate-if-campaign-invitation-can-be-sent\\test-finished-1.png"
+                      "path": "D:\\Kominiti Automation\\PW_Kominiti-UI-Automation\\PW_Kominiti-UI-Automation\\test-results\\homepage-Kominiti-014-Home-Wall-Validate-a-post-can-be-reposted-on-the-wall-via-share-option\\test-finished-1.png"
                     }
                   ]
                 }
@@ -116,9 +118,9 @@
               "status": "expected"
             }
           ],
-          "id": "12975f3ff1f884ffbbdd-3d1dd91f5a2cef49b43c",
-          "file": "login.test.ts",
-          "line": 914,
+          "id": "122d461871237fee6625-9a34d10f7b924e3efc96",
+          "file": "homepage.test.ts",
+          "line": 524,
           "column": 6
         }
       ]
@@ -126,8 +128,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-03-19T04:46:26.392Z",
-    "duration": 19595.289,
+    "startTime": "2024-03-29T08:51:34.116Z",
+    "duration": 30648.364,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

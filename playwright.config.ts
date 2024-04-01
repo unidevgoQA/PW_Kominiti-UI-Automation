@@ -8,8 +8,9 @@ const config: PlaywrightTestConfig = {
   globalSetup: "utils/global-setup.ts",
   testDir: "./tests",
   testMatch: [
-    "login.test.ts"
-
+    "login.test.ts",
+    "dashboard.test.ts",
+    "homepage.test.ts"
 
   ],
   timeout: 1 * 30 * 10000,
