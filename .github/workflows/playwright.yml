@@ -1,9 +1,9 @@
 name: Playwright Tests
 on:
   push:
-    branches: [main, master]
+    branches: [Safwon, master]
   pull_request:
-    branches: [main, master]
+    branches: [Safwon, master]
   schedule:
     - cron: "0 15 * * *" # Cron schedule to trigger workflow at a specific time
 jobs:
