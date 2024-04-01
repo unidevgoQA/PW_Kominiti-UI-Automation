@@ -107,7 +107,7 @@ export default class MarketPlacePage{
         AddQusAfterEdit: "//div[text()='What is the cost from automation edited']",
 
         //testPorject
-        TestAbcProject: "//div[text()='TestABC']",
+        TestAbcProject: "(//div[@class='new-market-place-list--interest_project--item-title']//h3)[3]",
         ContactBuyerBtn: "//button[text()='Contact Buyer']",
         MessageBoxBuyers: "//div[@class='user-name']//h3[1]",
 
