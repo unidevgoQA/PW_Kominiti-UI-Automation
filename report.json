@@ -43,7 +43,7 @@
         "testDir": "K:/A UNIDEVGO/PW_Kominiti-UI-Automation/tests",
         "testIgnore": [],
         "testMatch": [
-          "MarketPlace.test.ts"
+          "AdminPanel_02.test.ts"
         ],
         "timeout": 300000
       }
@@ -56,13 +56,13 @@
   },
   "suites": [
     {
-      "title": "MarketPlace.test.ts",
-      "file": "MarketPlace.test.ts",
+      "title": "AdminPanel_02.test.ts",
+      "file": "AdminPanel_02.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Kominiti-082 | Marketplace | Project | Validate message box open when contact buyer is clicked.",
+          "title": "Kominiti-111 | Admin Panel",
           "ok": true,
           "tags": [],
           "tests": [
@@ -76,7 +76,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 42418,
+                  "duration": 29863,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -84,35 +84,23 @@
                   "steps": [
                     {
                       "title": "Go to the url",
-                      "duration": 9043
-                    },
-                    {
-                      "title": "Click On sign In Button",
-                      "duration": 392
+                      "duration": 24604
                     },
                     {
                       "title": "User Login Functionality",
-                      "duration": 24197
+                      "duration": 3904
                     },
                     {
-                      "title": "Marketplace redirects on click",
-                      "duration": 430
-                    },
-                    {
-                      "title": "Click on a project name TEST ABC",
-                      "duration": 4284
-                    },
-                    {
-                      "title": "Click on to contact buyers",
-                      "duration": 3159
+                      "title": "Amin Panel redirects on click",
+                      "duration": 338
                     }
                   ],
-                  "startTime": "2024-04-01T10:11:02.647Z",
+                  "startTime": "2024-04-15T12:09:35.141Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-082-Marketplace-Project-V-c25b7-message-box-open-when-contact-buyer-is-clicked-\\test-finished-1.png"
+                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\AdminPanel_02-Kominiti-111-Admin-Panel\\test-finished-1.png"
                     }
                   ]
                 }
@@ -120,265 +108,9 @@
               "status": "expected"
             }
           ],
-          "id": "36a5fc31f008691f9dde-18937b190ba92eb519ae",
-          "file": "MarketPlace.test.ts",
-          "line": 1244,
-          "column": 6
-        },
-        {
-          "title": "Kominiti-085 | Marketplace | Project | Place bid | Validate user can place bid",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 300000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 88535,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "Go to the url",
-                      "duration": 42871
-                    },
-                    {
-                      "title": "Click On sign In Button",
-                      "duration": 342
-                    },
-                    {
-                      "title": "User Login Functionality",
-                      "duration": 25434
-                    },
-                    {
-                      "title": "Marketplace redirects on click",
-                      "duration": 347
-                    },
-                    {
-                      "title": "Click on a project Automation",
-                      "duration": 7201
-                    },
-                    {
-                      "title": "Validate Placing a Bid",
-                      "duration": 11717
-                    }
-                  ],
-                  "startTime": "2024-04-01T10:11:45.560Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-085-Marketplace-Project-Place-bid-Validate-user-can-place-bid\\test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "36a5fc31f008691f9dde-9695e81c2efd44001eb4",
-          "file": "MarketPlace.test.ts",
-          "line": 1418,
-          "column": 6
-        },
-        {
-          "title": "Kominiti-086 | Marketplace | Project | Validate that after bid is placed user can edit bid",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 300000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 63216,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "Go to the url",
-                      "duration": 21167
-                    },
-                    {
-                      "title": "Click On sign In Button",
-                      "duration": 342
-                    },
-                    {
-                      "title": "User Login Functionality",
-                      "duration": 20266
-                    },
-                    {
-                      "title": "Marketplace redirects on click",
-                      "duration": 379
-                    },
-                    {
-                      "title": "Click on a project Automation",
-                      "duration": 7193
-                    },
-                    {
-                      "title": "Click edit bid button to edit the bid",
-                      "duration": 13282
-                    }
-                  ],
-                  "startTime": "2024-04-01T10:13:14.101Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-086-Marketplace-Project-Validate-that-after-bid-is-placed-user-can-edit-bid\\test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "36a5fc31f008691f9dde-fa1e28a9dd1332dc48d7",
-          "file": "MarketPlace.test.ts",
-          "line": 1483,
-          "column": 6
-        },
-        {
-          "title": "Kominiti-087 | Marketplace | Project | Validate that after bid is placed user can Delete bid",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 300000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 58884,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "Go to the url",
-                      "duration": 20399
-                    },
-                    {
-                      "title": "Click On sign In Button",
-                      "duration": 342
-                    },
-                    {
-                      "title": "User Login Functionality",
-                      "duration": 22029
-                    },
-                    {
-                      "title": "Marketplace redirects on click",
-                      "duration": 353
-                    },
-                    {
-                      "title": "Click on a project Automation",
-                      "duration": 9284
-                    },
-                    {
-                      "title": "Validate deleting bid",
-                      "duration": 5900
-                    }
-                  ],
-                  "startTime": "2024-04-01T10:14:17.324Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-087-Marketplace-Project-Validate-that-after-bid-is-placed-user-can-Delete-bid\\test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "36a5fc31f008691f9dde-f8203cbb9e95fc41f69e",
-          "file": "MarketPlace.test.ts",
-          "line": 1546,
-          "column": 6
-        },
-        {
-          "title": "Kominiti-088 | Marketplace | Project | Place bid | Validate that when cancel button is clicked it canceled the bid and redirects to overview",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 300000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 47702,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "steps": [
-                    {
-                      "title": "Go to the url",
-                      "duration": 16161
-                    },
-                    {
-                      "title": "Click On sign In Button",
-                      "duration": 374
-                    },
-                    {
-                      "title": "User Login Functionality",
-                      "duration": 17660
-                    },
-                    {
-                      "title": "Marketplace redirects on click",
-                      "duration": 367
-                    },
-                    {
-                      "title": "Click on a project Automation",
-                      "duration": 7241
-                    },
-                    {
-                      "title": "Click on a place Bid and cancel",
-                      "duration": 5369
-                    }
-                  ],
-                  "startTime": "2024-04-01T10:15:16.213Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "K:\\A UNIDEVGO\\PW_Kominiti-UI-Automation\\test-results\\MarketPlace-Kominiti-088-Marketplace-Project-P-06f71-d-it-canceled-the-bid-and-redirects-to-overview\\test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "36a5fc31f008691f9dde-4ca306b98b70d44f2be4",
-          "file": "MarketPlace.test.ts",
-          "line": 1606,
+          "id": "6a9b8710f1023f897ed5-f7219d395e901219d488",
+          "file": "AdminPanel_02.test.ts",
+          "line": 7,
           "column": 6
         }
       ]
@@ -386,9 +118,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-04-01T10:10:59.938Z",
-    "duration": 304299.866,
-    "expected": 5,
+    "startTime": "2024-04-15T12:09:33.983Z",
+    "duration": 31795.173,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

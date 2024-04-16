@@ -32,9 +32,7 @@ test('Kominiti-111 | Hot deals | Validate search functionalities is working and 
     //Hotdeals
     await test.step('HotDeals redirects on click',async () => {
             await HotDeals.clickHotDealsRedirects()
-            
-           
-                
+                     
     })
     
     
