@@ -8,9 +8,7 @@ const config: PlaywrightTestConfig = {
   globalSetup: "utils/global-setup.ts",
   testDir: "./tests",
   testMatch: [
-    "login.test.ts",
-    "dashboard.test.ts",
-    "homepage.test.ts"
+    "adminlogin.test.ts"
 
   ],
   timeout: 1 * 30 * 10000,
@@ -70,7 +68,7 @@ const config: PlaywrightTestConfig = {
     // actionTimeout: 2 * 60 * 1000,
     trace: process.env.CI ? "off" : "off",
     video: process.env.CI ? "off" : "off",
-    screenshot: process.env.CI ? "off" : "on",
+    screenshot: process.env.CI ? "on" : "on",
   },
 
 

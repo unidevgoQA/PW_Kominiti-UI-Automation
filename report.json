@@ -1,10 +1,10 @@
 {
   "config": {
-    "configFile": "D:\\Kominiti Automation\\PW_Kominiti-UI-Automation\\PW_Kominiti-UI-Automation\\playwright.config.ts",
-    "rootDir": "D:/Kominiti Automation/PW_Kominiti-UI-Automation/PW_Kominiti-UI-Automation/tests",
+    "configFile": "D:\\PW_Kominiti2\\PW_Kominiti-UI-Automation\\playwright.config.ts",
+    "rootDir": "D:/PW_Kominiti2/PW_Kominiti-UI-Automation/tests",
     "forbidOnly": false,
     "fullyParallel": true,
-    "globalSetup": "D:\\Kominiti Automation\\PW_Kominiti-UI-Automation\\PW_Kominiti-UI-Automation\\utils\\global-setup.ts",
+    "globalSetup": "D:\\PW_Kominiti2\\PW_Kominiti-UI-Automation\\utils\\global-setup.ts",
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
@@ -35,17 +35,15 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "D:/Kominiti Automation/PW_Kominiti-UI-Automation/PW_Kominiti-UI-Automation/test-results",
+        "outputDir": "D:/PW_Kominiti2/PW_Kominiti-UI-Automation/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "",
         "name": "",
-        "testDir": "D:/Kominiti Automation/PW_Kominiti-UI-Automation/PW_Kominiti-UI-Automation/tests",
+        "testDir": "D:/PW_Kominiti2/PW_Kominiti-UI-Automation/tests",
         "testIgnore": [],
         "testMatch": [
-          "login.test.ts",
-          "dashboard.test.ts",
-          "homepage.test.ts"
+          "adminlogin.test.ts"
         ],
         "timeout": 300000
       }
@@ -58,13 +56,13 @@
   },
   "suites": [
     {
-      "title": "homepage.test.ts",
-      "file": "homepage.test.ts",
+      "title": "adminlogin.test.ts",
+      "file": "adminlogin.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Kominiti-014 | Home | Wall | Validate a post can be reposted on the wall via share option",
+          "title": "AdminPanel-086 | Home | Other Modules | Trivia | Trivia Answers | Validate if a Trivia Answer can be deleted",
           "ok": true,
           "tags": [],
           "tests": [
@@ -78,7 +76,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 27800,
+                  "duration": 16203,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
@@ -86,31 +84,39 @@
                   "steps": [
                     {
                       "title": "Go to the url",
-                      "duration": 1553
+                      "duration": 4112
                     },
                     {
-                      "title": "Click On sign In Button",
-                      "duration": 627
+                      "title": "Write on Email Textbox",
+                      "duration": 232
+                    },
+                    {
+                      "title": "Write on Password Textbox",
+                      "duration": 138
                     },
                     {
                       "title": "User Login Functionality",
-                      "duration": 4713
+                      "duration": 2952
                     },
                     {
-                      "title": "Click on Home button",
-                      "duration": 300
+                      "title": "Click on Other Modules Button",
+                      "duration": 1304
                     },
                     {
-                      "title": "Validate a post can be reposted on the wall via share option",
-                      "duration": 19599
+                      "title": "Click on Trivia Answers Button",
+                      "duration": 2883
+                    },
+                    {
+                      "title": "Validate if an Question can be deleted",
+                      "duration": 3556
                     }
                   ],
-                  "startTime": "2024-03-29T08:51:35.204Z",
+                  "startTime": "2024-07-03T20:07:06.757Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Kominiti Automation\\PW_Kominiti-UI-Automation\\PW_Kominiti-UI-Automation\\test-results\\homepage-Kominiti-014-Home-Wall-Validate-a-post-can-be-reposted-on-the-wall-via-share-option\\test-finished-1.png"
+                      "path": "D:\\PW_Kominiti2\\PW_Kominiti-UI-Automation\\test-results\\adminlogin-AdminPanel-086-Home-Other-Modules-T-3c292-wers-Validate-if-a-Trivia-Answer-can-be-deleted\\test-finished-1.png"
                     }
                   ]
                 }
@@ -118,9 +124,9 @@
               "status": "expected"
             }
           ],
-          "id": "122d461871237fee6625-9a34d10f7b924e3efc96",
-          "file": "homepage.test.ts",
-          "line": 524,
+          "id": "0faa6f73e029a52bba04-df29d021cc7b097b3fc5",
+          "file": "adminlogin.test.ts",
+          "line": 2198,
           "column": 6
         }
       ]
@@ -128,8 +134,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-03-29T08:51:34.116Z",
-    "duration": 30648.364,
+    "startTime": "2024-07-03T20:07:05.536Z",
+    "duration": 18252.119,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
